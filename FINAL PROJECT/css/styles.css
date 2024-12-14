@@ -133,6 +133,46 @@ footer {
 }
 
 
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* სივრცე ელემენტებს შორის */
+}
+
+.footer-logo {
+    height: 125px; /* ლოგოს ზომა */
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 15px; /* სოციალური ლოგოების შუალედი */
+    margin: 0;
+    padding: 0;
+}
+
+.social-links li a img {
+    height: 50px; /* სოციალური მედიის ლოგოების ზომა */
+}
+
+
+.login{
+    background-color: #007bff;
+    width: 60px;
+    height: 60px;
+}
+
+.social-links{
+    align-items: center;
+}
+
+
 /* მოზრდილი ეკრანებისთვის */
 @media (max-width: 768px) {
     header nav ul {
@@ -169,5 +209,24 @@ footer {
         width: 100%;
         margin-bottom: 10px;
     }
+}
+
+.bot {
+    background-color: #4CAF50; /* მწვანე ფონდი */
+    color: white; /* თეთრი ტექსტი */
+    border: none; /* საზღვრების ამოღება */
+    padding: 15px 32px; /* პედინგი */
+    text-align: center; /* ტექსტის გაწევა ცენტრში */
+    text-decoration: none; /* გრაფიკული დეკორაციების ამოღება */
+    display: inline-block;
+    font-size: 16px; /* შრიფტის ზომა */
+    margin: 4px 2px;
+    cursor: pointer; /* მღილაკზე მიცემის დროს მაუსის კურსორი შეიცვლება */
+    border-radius: 8px; /* წრეს უტყუარი რაგინდული */
+    transition: background-color 0.3s ease; /* ფონის ფერის სქალქციები */
+}
+
+.bot:hover {
+    background-color: #45a049; /* ღილაკის ფონის ფერი, როდესაც მასზე მიგიტავთ */
 }
 
