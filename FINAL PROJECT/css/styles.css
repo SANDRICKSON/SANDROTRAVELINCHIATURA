@@ -131,3 +131,42 @@ footer {
 #uploadButton:hover {
     background-color: #0056b3;
 }
+
+
+/* მოზრდილი ეკრანებისთვის */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li a {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+}
+
+/* ძალიან მცირე ეკრანების (მობილური ტელეფონები)თვის */
+@media (max-width: 480px) {
+    header nav ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .section h1 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
