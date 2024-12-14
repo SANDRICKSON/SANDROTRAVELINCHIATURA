@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="auth.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../images/SANDRINIO.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+    <style>
+        /* Responsive Design */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        section {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+        .form-outline input, .form-outline label {
+            font-size: 1.1em;
+        }
+        .btn {
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Focus state for input fields */
+        .form-control:focus {
+            border-color: #007BFF;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+        }
+
+        /* Pseudo-elements */
+        .form-label::after {
+            content: "*";
+            color: red;
+            margin-left: 5px;
+        }
+
+        /* Social login button hover */
+        .btn-facebook:hover, .btn-twitter:hover {
+            background-color: #007bff;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .col-md-7, .col-md-8 {
+                text-align: center;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li><a href="../index.html"><img src="../images/SANDRINIO.png" alt="Logo" class="logo" height="100"></a></li>
+        <li><a href="../index.html">მთავარი</a></li>
+        <li><a href="../history.html">ისტორია</a></li>
+        <li><a href="../culture.html">კულტურა</a></li>
+        <li><a href="../tourism.html">ტურიზმი</a></li>
+        <li><a href="../gallery.html">გალერეა</a></li>
+        <li><a href="../timetables.html">განრიგი</a></li>
+        <li><a href="../news.html">სიახლეები</a></li>
+        <li><a href="../aboutproject.html" class="active">პროექტის შესახებ</a></li>
+        <li><a href="login.html"><b>Log In</b></a></li>
+        <li><a href="register.html"><b>Register</b></a></li>
+    </ul>
+        <div class="language-buttons">
+            <button class="btn btn-warning" onclick="changeLanguage('ka')">ქართული</button>
+            <button class="btn btn-success" onclick="changeLanguage('en')">English</button>
+        </div>
+    </nav>
+</header>
+    <section>
+        <div class="container py-5 h-100">
+            <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw1.svg" class="img-fluid" alt="Phone image">
+                </div>
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                    <form>
+                        <!-- First Name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="firstName" class="form-control form-control-lg" required />
+                            <label class="form-label" for="firstName">First Name</label>
+                        </div>
+
+                        <!-- Last Name input -->
+                        <div class="form-outline mb-4">
+                            <input type="text" id="lastName" class="form-control form-control-lg" required />
+                            <label class="form-label" for="lastName">Last Name</label>
+                        </div>
+
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" id="email" class="form-control form-control-lg" required />
+                            <label class="form-label" for="email">Email Address</label>
+                        </div>
+
+                        <!-- Password input -->
+                        <div class="form-outline mb-4">
+                            <input type="password" id="password" class="form-control form-control-lg" required />
+                            <label class="form-label" for="password">Password</label>
+                        </div>
+
+                        <!-- Submit button -->
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+
+                        <!-- Divider -->
+                        <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+                        </div>
+
+                        <!-- Social login buttons -->
+                        <a class="btn btn-facebook btn-lg btn-block" href="#!" role="button">
+                            <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+                        </a>
+                        <a class="btn btn-twitter btn-lg btn-block" href="#!" role="button">
+                            <i class="fab fa-twitter me-2"></i>Continue with Twitter
+                        </a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
