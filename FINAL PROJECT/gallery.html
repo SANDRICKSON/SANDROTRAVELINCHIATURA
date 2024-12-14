@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>გალერეა - ჭიათურა</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/gallery.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/SANDRINIO.png" height="150" width="150"></li>
+                <li><a href="index.html" data-lang="main">მთავარი</a></li>
+                <li><a href="history.html" data-lang="history">ისტორია</a></li>
+                <li><a href="culture.html" data-lang="culture">კულტურა</a></li>
+                <li><a href="tourism.html" data-lang="tourism">ტურიზმი</a></li>
+                <li><a href="gallery.html" data-lang="gallery">გალერეა</a></li>
+                <li><a href="TIMETABLES.HTML" data-lang="timetable">განრიგი</a></li>
+                <li><a href="NEWS.HTML" data-lang="news">სიახლეები</a></li>
+                <li><a href="aboutproject.html">პროექტის შესახებ</a></li>
+            </ul>
+            <div>
+                <button class="btn btn-warning" onclick="changeLanguage('ka')">ქართული</button>
+                <button class="btn btn-success" onclick="changeLanguage('en')">English</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="section gallery">
+        <h2 data-lang="gallery-title">გალერეა</h2>
+        <p data-lang="gallery-text">იხილეთ ქალაქის ულამაზესი ხედები და მნიშვნელოვანი ადგილები.</p>
+
+        <!-- Upload Section -->
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*">
+            <button id="uploadButton" data-lang="upload-btn">ატვირთვა</button>
+            <b data-lang="urlsoon"> მალე ბმულით ატვირთვაც დაემატება</b>
+        </div>
+        
+        <!-- Gallery Section -->
+        <div class="gallery-container" id="galleryContainer">
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk1wlSc2srLC540Ng55LFmug38x7WKl08pYw&s" alt="Chiatura 1" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyVxI6K4e_n_QO1aNoH2u57vZXnp-Ck5i8Mg&s" alt="Chiatura 2" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSObJ9vxGEpGT-sXGlQS0fxoMmbihC7CyVN8w&s" alt="Chiatura 3" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvtBCkwtUotze2PUVqpjLUuieSfbNcvhjZMQ&s" alt="Chiatura 4" class="gallery-img">
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKQtnt0-pwxUeCzPPrUru0W41JhwpOITvJKA&s" alt="Chiatura 5" class="gallery-img">
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://www.tbceducation.ge/"><img src="images/tbc.png" height="100" width="100"></a>
+        <p>© 2024 ჭიათურა. ყველა უფლება დაცულია.</p>
+    </footer>
+
+</body>
+</html>

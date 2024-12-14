@@ -1,0 +1,133 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background: #2c3e50;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Section styling */
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+.main {
+    background: url('path_to_image/chiatura-bg.jpg') no-repeat center center/cover;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #34495e;
+    color: #fff;
+}
+
+/* Bus schedule styling */
+.bus-schedule {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bus-schedule th, .bus-schedule td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.bus-schedule th {
+    background-color: #007bff;
+    color: white;
+}
+
+.bus-schedule tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.bus-schedule tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Gallery styling */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+/* Upload Section Styling */
+.upload-section {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#imageUpload {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#uploadButton {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#uploadButton:hover {
+    background-color: #0056b3;
+}
