@@ -1,6 +1,7 @@
 const translations = {
     en: {
         "culture-title": "Culture - Chiatura",
+        about:"About Author",
         main: "Home",
         history: "History",
         culture: "Culture",
@@ -24,6 +25,7 @@ const translations = {
     },
     ka: {
         "culture-title": "კულტურა - ჭიათურა",
+        about:"ავტორის შესახებ",
         main: "მთავარი",
         history: "ისტორია",
         culture: "კულტურა",
