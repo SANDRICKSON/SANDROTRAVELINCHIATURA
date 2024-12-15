@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>კონტაქტი</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/SANDRINIO.png" height="150" width="150"></li>
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="history.html">ისტორია</a></li>
+                <li><a href="culture.html">კულტურა</a></li>
+                <li><a href="tourism.html">ტურიზმი</a></li>
+                <li><a href="gallery.html">გალერეა</a></li>
+                <li><a href="TIMETABLES.HTML">განრიგი</a><li>
+                <li><a href="NEWS.HTML">სიახლეები</a></li>
+                <li><a href="aboutproject.html">პროექტის შესახებ</a></li>
+                <li><a href="blogs.html">ვიდეოები</a></li>
+                <li><a href="contact.html">კონტაქტი</a></li>
+                <li>
+                    <a href="AUTH/login.html" class="btn btn-outline-primary btn-sm ms-2" data-lang="login">შესვლა</a>
+                </li>
+                <li>
+                    <a href="AUTH/register.html" class="btn btn-primary btn-sm ms-2" data-lang="Register">რეგისტრაცია</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #007BFF, #00BFFF);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 30px;
+            background: #fff;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-10px);
+        }
+        h2 {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            animation: slideUp 1.2s ease-in-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        input, textarea, button {
+            margin-bottom: 15px;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: border-color 0.3s ease, transform 0.2s ease;
+        }
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        input:focus, textarea:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .social-icons a {
+            margin: 0 15px;
+            color: #555;
+            font-size: 2em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #007BFF;
+            transform: scale(1.2);
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px;
+                padding: 20px;
+            }
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ჩვენთან დაკავშირება</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>დაგვიკავშირდით</h2>
+            <form action="index.html" method="post">
+                <label for="name">სახელი</label>
+                <input type="text" id="name" name="name" placeholder="შეიყვანეთ თქვენი სახელი" required>
+                
+                <label for="email">ელფოსტა</label>
+                <input type="email" id="email" name="email" placeholder="შეიყვანეთ თქვენი ელფოსტა" required>
+                
+                <label for="message">მესიჯი</label>
+                <textarea id="message" name="message" placeholder="დაწერეთ თქვენი მესიჯი" rows="5" required></textarea>
+                
+                <button type="submit">გაგზავნა</button>
+            </form>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>ყველა უფლება დაცულია © 2024</p>
+    </footer>
+</body>
+</html>
