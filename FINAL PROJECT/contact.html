@@ -8,29 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html"><img src="images/SANDRINIO.png" height="150" width="150"></li>
-                <li><a href="index.html">მთავარი</a></li>
-                <li><a href="history.html">ისტორია</a></li>
-                <li><a href="culture.html">კულტურა</a></li>
-                <li><a href="tourism.html">ტურიზმი</a></li>
-                <li><a href="gallery.html">გალერეა</a></li>
-                <li><a href="TIMETABLES.HTML">განრიგი</a><li>
-                <li><a href="NEWS.HTML">სიახლეები</a></li>
-                <li><a href="aboutproject.html">პროექტის შესახებ</a></li>
-                <li><a href="blogs.html">ვიდეოები</a></li>
-                <li><a href="contact.html">კონტაქტი</a></li>
-                <li>
-                    <a href="AUTH/login.html" class="btn btn-outline-primary btn-sm ms-2" data-lang="login">შესვლა</a>
-                </li>
-                <li>
-                    <a href="AUTH/register.html" class="btn btn-primary btn-sm ms-2" data-lang="Register">რეგისტრაცია</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
     <style>
         body {
             font-family: 'Roboto', Arial, sans-serif;
@@ -41,7 +18,7 @@
             line-height: 1.6;
         }
         header {
-            background: linear-gradient(135deg, #007BFF, #00BFFF);
+            background: linear-gradient;
             color: #fff;
             padding: 20px 0;
             text-align: center;
@@ -151,11 +128,32 @@
 <body>
     <header>
         <h1>ჩვენთან დაკავშირება</h1>
+        <nav class="navbar">
+            <ul class="nav-menu">
+                <li><a href="index.html"><img src="images/SANDRINIO.png" alt="Logo" class="logo" height="100"></a></li>
+                <li><a href="index.html" data-lang="main">მთავარი</a></li>
+                <li><a href="history.html" data-lang="history">ისტორია</a></li>
+                <li><a href="culture.html" data-lang="culture">კულტურა</a></li>
+                <li><a href="tourism.html" data-lang="tourism">ტურიზმი</a></li>
+                <li><a href="gallery.html" data-lang="gallery">გალერეა</a></li>
+                <li><a href="timetables.html" data-lang="timetable">განრიგი</a></li>
+                <li><a href="news.html" data-lang="news">სიახლეები</a></li>
+                <li><a href="aboutproject.html" data-lang="project" class="active">პროექტის შესახებ</a></li>
+                <li><a href="blogs.html">ვიდეოები</a></li>
+                <li><a href="contact.html">კონტაქტი</a></li>
+                <li><a href="AUTH/login.html"><b>Log In</b></a></li>
+                <li><a href="AUTH/register.html"><b>Register</b></a></li>
+            </ul>
+            <div class="language-buttons">
+                <button class="btn btn-warning" onclick="changeLanguage('ka')">ქართული</button>
+                <button class="btn btn-success" onclick="changeLanguage('en')">English</button>
+            </div>
+        </nav>
     </header>
     <main>
         <div class="container">
             <h2>დაგვიკავშირდით</h2>
-            <form action="index.html" method="post">
+            <form id="contactForm">
                 <label for="name">სახელი</label>
                 <input type="text" id="name" name="name" placeholder="შეიყვანეთ თქვენი სახელი" required>
                 
@@ -177,5 +175,11 @@
     <footer>
         <p>ყველა უფლება დაცულია © 2024</p>
     </footer>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // აჩერებს ფორმის სტანდარტულ გაგზავნას
+            window.location.href = 'index.html'; // გადამისამართება მთავარ გვერდზე
+        });
+    </script>
 </body>
 </html>
