@@ -38,7 +38,7 @@
         <h1>ვიდეოების გალერეა</h1>
         <section id="video-gallery">
             <div class="video-frame">
-                <iframe width="600" height="400" 
+                <iframe width="100%" height="100%" 
                         src="https://www.youtube.com/embed/pJUaFYsKhEM" 
                         title="YouTube video" 
                         frameborder="0" 
@@ -46,32 +46,137 @@
                         allowfullscreen>
                 </iframe>
             </div>
-        </section>
-        
-        <section id="video-gallery">
             <div class="video-frame">
-                <iframe width="600" height="400" 
-                        src="https://www.youtube.com/watch?v=oxNuZqXGX6U" 
+                <iframe width="100%" height="100%" 
+                        src="https://www.youtube.com/embed/oxNuZqXGX6U" 
                         title="YouTube video" 
                         frameborder="0" 
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                         allowfullscreen>
                 </iframe>
             </div>
+            
+            </div>
         </section>
+        
                 
         
 
         <section id="upload-video">
             <h2>ვიდეოს ატვირთვა</h2>
             <form id="video-upload-form" enctype="multipart/form-data">
-                <label for="video-upload">აირჩიეთ ვიდეო:</label>
-                <input type="file" id="video-upload" name="video" accept="video/*" required>
-                <button type="submit">ატვირთვა</button>
+                <div class="form-group">
+                    <label for="video-upload">აირჩიეთ ვიდეო:</label>
+                    <input type="file" id="video-upload" name="video" accept="video/*" required>
+                </div>
+                <button type="submit" id="uploadButton">ატვირთვა</button>
             </form>
         </section>
-    </main>
 
+        <style>
+            /* Video upload section styling */
+#upload-video {
+    background-color: #f9f9f9;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+#upload-video h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#video-upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    text-align: left;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+input[type="file"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+input[type="file"]:focus {
+    outline: none;
+    border-color: #007bff;
+    background-color: #e9f7ff;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Video Gallery Styling */
+#video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjust the number of columns */
+    gap: 20px; /* Space between videos */
+    padding: 20px;
+}
+
+.video-frame {
+    background-color: #f1f1f1; /* Light background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for a modern look */
+    overflow: hidden; /* Prevents video from overflowing */
+}
+
+.video-frame iframe {
+    width: 100%;
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures video maintains aspect ratio */
+    border-radius: 10px;
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    #video-gallery {
+        grid-template-columns: 1fr; /* Stack videos in a single column on smaller screens */
+    }
+
+    .video-frame iframe {
+        height: 180px; /* Slightly smaller on small screens */
+    }
+}
+
+        </style>
     <script src="js/videos.js"></script>
 </body>
 </html>
