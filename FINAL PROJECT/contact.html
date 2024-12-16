@@ -127,27 +127,27 @@
 </head>
 <body>
     <header>
-        <h1>ჩვენთან დაკავშირება</h1>
-        <nav class="navbar">
-            <ul class="nav-menu">
-                <li><a href="index.html"><img src="images/SANDRINIO.png" alt="Logo" class="logo" height="100"></a></li>
-                <li><a href="index.html" data-lang="main">მთავარი</a></li>
-                <li><a href="history.html" data-lang="history">ისტორია</a></li>
-                <li><a href="culture.html" data-lang="culture">კულტურა</a></li>
-                <li><a href="tourism.html" data-lang="tourism">ტურიზმი</a></li>
-                <li><a href="gallery.html" data-lang="gallery">გალერეა</a></li>
-                <li><a href="timetables.html" data-lang="timetable">განრიგი</a></li>
-                <li><a href="news.html" data-lang="news">სიახლეები</a></li>
-                <li><a href="aboutproject.html" data-lang="project" class="active">პროექტის შესახებ</a></li>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img src="images/SANDRINIO.png" height="150" width="150"></a></li>
+                <li><a href="index.html">მთავარი</a></li>
+                <li><a href="history.html">ისტორია</a></li>
+                <li><a href="culture.html">კულტურა</a></li>
+                <li><a href="tourism.html">ტურიზმი</a></li>
+                <li><a href="gallery.html">გალერეა</a></li>
+                <li><a href="TIMETABLES.HTML">განრიგი</a></li>
+                <li><a href="NEWS.HTML">სიახლეები</a></li>
+                <li><a href="aboutproject.html">პროექტის შესახებ</a></li>
                 <li><a href="blogs.html">ვიდეოები</a></li>
                 <li><a href="contact.html">კონტაქტი</a></li>
-                <li><a href="AUTH/login.html"><b>Log In</b></a></li>
-                <li><a href="AUTH/register.html"><b>Register</b></a></li>
+                <li><a href="books.html">წიგნები</a></li>
+                <li>
+                    <a href="AUTH/login.html" class="btn btn-outline-primary btn-sm ms-2" data-lang="login">შესვლა</a>
+                </li>
+                <li>
+                    <a href="AUTH/register.html" class="btn btn-primary btn-sm ms-2" data-lang="Register">რეგისტრაცია</a>
+                </li>
             </ul>
-            <div class="language-buttons">
-                <button class="btn btn-warning" onclick="changeLanguage('ka')">ქართული</button>
-                <button class="btn btn-success" onclick="changeLanguage('en')">English</button>
-            </div>
         </nav>
     </header>
     <main>
@@ -173,7 +173,16 @@
         </div>
     </main>
     <footer>
-        <p>ყველა უფლება დაცულია © 2024</p>
+        <div class="footer-content">
+            <a href="https://www.tbceducation.ge/"><img src="images/tbc.png" alt="TBC Logo" class="footer-logo" height="125"></a>
+            
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/profile.php?id=61556699115785&locale=ka_GE"><img src="images/imfacebook.png" alt="Facebook" height="125"></a></li>
+                <li><a href=""><img src="images/insta.png" alt="Instagram" height="125"></a></li>
+                <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><img src="images/linked.png" alt="LinkedIn" height="125"></a></li>
+            </ul>
+        </div>
+        <p>© 2024 ყველა უფლება დაცულია.</p>
     </footer>
     <script>
         document.getElementById('contactForm').addEventListener('submit', function(event) {
