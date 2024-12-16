@@ -355,3 +355,101 @@ footer {
     animation: moveCableCar 8s infinite alternate linear;
 }
 
+
+
+
+
+
+header .header-books {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+header .header-books img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+/* Global styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Subscription form container */
+.subscription-form-container {
+    background-color: #ffffff;
+    color: #333;
+    border-radius: 8px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    margin: 30px auto;
+    border: 1px solid #ddd; /* Light border to match the design */
+}
+
+/* Heading */
+.subscription-form-container h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2575fc; /* Blue to match the website theme */
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subscription-form-container p {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Email input field */
+.subscription-form input[type="email"] {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Focus effect on input */
+.subscription-form input[type="email"]:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+}
+
+/* Subscribe button */
+.subscribe-btn {
+    padding: 12px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+/* Hover effect on button */
+.subscribe-btn:hover {
+    background-color: #6a11cb;
+}
