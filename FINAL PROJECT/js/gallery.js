@@ -1,33 +1,44 @@
 const translations = {
     en: {
-        main: "Home",
-        history: "History",
-        culture: "Culture",
-        tourism: "Tourism",
-        gallery: "Gallery",
-        timetable: "Timetable",
-        news: "News",
+        "main": "Home",
+        "history": "History",
+        "culture": "Culture",
+        "tourism": "Tourism",
+        "gallery": "Gallery",
+        "timetable": "Timetable",
+        "news": "News",
+        "project": "About the Project",
+        "videos": "Videos",
+        "contact": "Contact",
+        "books": "Books",
+        "log-in": "Log In",
+        "register": "Register",
         "gallery-title": "Gallery",
-        "gallery-text": "Explore the beautiful views and important places of the city.",
+        "gallery-text": "See the beautiful views and important places of the city.",
         "upload-btn": "Upload",
-        "upload-alert": "Please select an image!",
-        "urlsoon":"Sure uploading using an URL will be avaliable"
+        "urlsoon": "A link upload will be added soon"
     },
     ka: {
-        main: "მთავარი",
-        history: "ისტორია",
-        culture: "კულტურა",
-        tourism: "ტურიზმი",
-        gallery: "გალერეა",
-        timetable: "განრიგი",
-        news: "სიახლეები",
+        "main": "მთავარი",
+        "history": "ისტორია",
+        "culture": "კულტურა",
+        "tourism": "ტურიზმი",
+        "gallery": "გალერეა",
+        "timetable": "განრიგი",
+        "news": "სიახლეები",
+        "project": "პროექტის შესახებ",
+        "videos": "ვიდეოები",
+        "contact": "კონტაქტი",
+        "books": "წიგნები",
+        "log-in": "შესვლა",
+        "register": "რეგისტრაცია",
         "gallery-title": "გალერეა",
         "gallery-text": "იხილეთ ქალაქის ულამაზესი ხედები და მნიშვნელოვანი ადგილები.",
         "upload-btn": "ატვირთვა",
-        "upload-alert": "გთხოვთ, აირჩიოთ სურათი!",
-        "urlsoon":"მალე ბმულით ატვირთვაც დაემატება"
+        "urlsoon": "მალე ბმულით ატვირთვაც დაემატება"
     }
 };
+
 
 function changeLanguage(lang) {
     document.querySelectorAll("[data-lang]").forEach(element => {
@@ -66,3 +77,4 @@ document.getElementById("uploadButton").addEventListener("click", function () {
         alert(document.getElementById("uploadButton").getAttribute("data-alert"));
     }
 });
+
