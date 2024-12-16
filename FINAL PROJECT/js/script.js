@@ -41,3 +41,17 @@ document.getElementById('uploadButton').addEventListener('click', function() {
         }
     }
 });
+
+
+    // შემოწმება თუ ცალკე URL-ზე გადავდივართ
+    window.onload = function() {
+        const validPages = ['index.html', 'history.html', 'culture.html', 'tourism.html', 'gallery.html', 'timetables.html', 'news.html', 'aboutproject.html', 'blogs.html', 'contact.html'];
+        const currentUrl = window.location.pathname.split('/').pop();
+
+        // თუ მიმდინარე გვერდი არ არის უფლება, გადავაგზავნოთ 404-ზე
+        if (!validPages.includes(currentUrl)) {
+            window.location.href = '404.html';
+        }
+    };
+
+
