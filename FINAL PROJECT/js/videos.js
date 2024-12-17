@@ -54,6 +54,7 @@ document.getElementById('video-upload-form').addEventListener('submit', function
 });
 
 
+
 function changeLanguage(lang) {
     const elements = document.querySelectorAll('[data-lang]');
 
