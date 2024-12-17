@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js"></script>
 </head>
 <body>
 
@@ -19,8 +20,9 @@
                 <li><a href="history.html" data-lang="history">ისტორია</a></li>
                 <li><a href="culture.html" data-lang="culture">კულტურა</a></li>
                 <li><a href="tourism.html" data-lang="tourism">ტურიზმი</a></li>
-                <li><a href="TIMETABLES.HTML" data-lang="timetable">განრიგი</a></li>
-                <li><a href="NEWS.HTML" data-lang="news">სიახლეები</a></li>
+                <li><a href="gallery.html" data-lang="gallery">გალერეა</a></li>
+                <li><a href="timetables.html" data-lang="timetable">განრიგი</a></li>
+                <li><a href="news.html" data-lang="news">სიახლეები</a></li>
                 <li><a href="aboutproject.html" data-lang="project" class="active">პროექტის შესახებ</a></li>
                 <li><a href="blogs.html" data-lang="videos">ვიდეოები</a></li>
                 <li><a href="contact.html" data-lang="contact">კონტაქტი</a></li>
@@ -71,9 +73,9 @@
             <div class="bot-card">
                 <img src="images/BOT1.jpg" alt="გიდბოტი ეკა" class="bot-image">
                 <div class="bot-content">
-                    <h3>გიდბოტი ეკა</h3>
-                    <p>სატესტო რეჟიმში მომუშავე ჩეთბოტი</p>
-                    <p class="cta-text">დააჭირეთ სურათს რათა ილაპარაკოთ</p>
+                    <h3 data-lang="eka">გიდბოტი ეკა</h3>
+                    <p data-lang="testmode">სატესტო რეჟიმში მომუშავე ჩეთბოტი</p>
+                    <p class="cta-text" data-lang="click">დააჭირეთ სურათს რათა ილაპარაკოთ</p>
                 </div>
             </div>
         </a>
@@ -84,9 +86,9 @@
             <div class="bot-card">
                 <img src="images/download.png" alt="Explore Chiatura" class="bot-image">
                 <div class="bot-content">
-                    <h3>ჩამოტვირთეთ შესაბამისი აპლიკაცია</h3>
-                    <p>Explore Chiatura სატესტო რეჟიმში მომუშავე აპი</p>
-                    <p class="cta-text">დაასკანერე ან დააკლიკე ჩამოსატვირთად</p>
+                    <h3 data-lang="app">ჩამოტვირთეთ შესაბამისი აპლიკაცია</h3>
+                    <p data-lang="testapp">Explore Chiatura სატესტო რეჟიმში მომუშავე აპი</p>
+                    <p class="cta-text" data-lang="scan">დაასკანერე ან დააკლიკე ჩამოსატვირთად</p>
                 </div>
             </div>
         </a>
@@ -97,20 +99,20 @@
             <div class="bot-card">
                 <img src="images/psychobot.png" alt="Explore Chiatura" class="bot-image">
                 <div class="bot-content">
-                    <h3>შეიძლება ასევე მოგეწონოთ</h3>
-                    <p>ჩეთბოტი მედეა</p>
-                    <p class="cta-text">მოიწონე Facebook გვერდი</p>
+                    <h3 data-lang="like">შეიძლება ასევე მოგეწონოთ</h3>
+                    <p data-lang="medea">ჩეთბოტი მედეა</p>
+                    <p class="cta-text" data-lang="page">მოიწონე Facebook გვერდი</p>
                 </div>
             </div>
         </a>
     </div>
 
     <div class="subscription-form-container">
-        <h2>გამოიწერეთ სიახლეები</h2>
-        <p>ჩაწერეთ თქვენი მეილი და მიიღეთ უახლესი ინფორმაციები სისტემატიურად.</p>
+        <h2 data-lang="subscription">გამოიწერეთ სიახლეები</h2>
+        <p data-lang="write">ჩაწერეთ თქვენი მეილი და მიიღეთ უახლესი ინფორმაციები სისტემატიურად.</p>
         <form action="javascript:void(0);" method="POST" class="subscription-form" onsubmit="alert('თქვენი გამოწერა შესრულებულია');">
-            <input type="email" name="email" placeholder="ჩაწერეთ მეილი" required>
-            <button type="submit" class="subscribe-btn">გამოწერა</button>
+            <input data-lang="mail" type="email" name="email" placeholder="ჩაწერეთ მეილი" required>
+            <button type="submit" class="subscribe-btn" data-lang="subscribe">გამოწერა</button>
         </form>
     </div>
     
