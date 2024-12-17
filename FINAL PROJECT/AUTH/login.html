@@ -9,6 +9,30 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="shortcut icon" href="../images/SANDRINIO.png" type="image/x-icon">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+
+    <style>
+        .facebook-btn {
+            margin-top: 20px; /* დაამატეთ დაშორება Facebook ღილაკს */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background-color: #3b5998;
+            color: white;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .facebook-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        .btn-primary.btn-lg {
+            margin-bottom: 20px; /* დამატებული დაშორება "Sign in"-ის ღილაკს */
+        }
+    </style>
 </head>
 <body>
   <header>
@@ -64,25 +88,25 @@
                   </div>
                   <a href="#!">Forgot password?</a>
                 </div>
-      
+                
+              
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-lg btn-block" onclick="redirectToIndex()">Sign in</button>
 
-<script>
-    function redirectToIndex() {
-        window.location.href = 'FINAL PROJECT/index.html';
-    }
-</script>
+                <script>
+                    function redirectToIndex() {
+                        window.location.href = 'FINAL PROJECT/index.html';
+                    }
+                </script>
 
-
-      
                 <div class="divider d-flex align-items-center my-4">
                   <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
                 </div>
       
-                <a class="btn btn-facebook btn-lg btn-block" href="#!" role="button">
+                <a class="btn btn-facebook btn-lg btn-block" href="facebook.html" role="button">
                   <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
                 </a>
+                
                 <a class="btn btn-twitter btn-lg btn-block" href="#!" role="button">
                   <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
       
@@ -93,4 +117,3 @@
       </section>
 </body>
 </html>
-
