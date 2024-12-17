@@ -1,5 +1,10 @@
 const translations = {
     en: {
+        "warning":"An article is only in Georgian",
+        "article":"An Interesting Article: Vazha-Pshavela in Chiatura",
+        "blackgold":"A book published on the occasion of the centennial of Chiatura, which reflects the development, history, industry, and culture of Chiatura.",
+        "galaqtioni":"A poem by the King of Poets, Galaktion, about the city of black gold. An interesting fact is that Galaktion's wife, Mrs. Olya Okujava, was appointed a teacher in the city of Chiatura. So you will definitely see the steps of the great Galaktion at the railway station",
+        "turashvili":"A book about the city of Chiatura by the legendary Georgian writer Dato Turashvili",
        "main": "Home",
         "history": "History",
         "culture": "Culture",
@@ -17,6 +22,11 @@ const translations = {
         "culture-text": "The city has cultural institutions such as the Akaki Tsereteli Drama Theatre, a cinema-theatre, the Palace of Rituals, the House of the Artist, the Chiatura Regional Museum, and the Cultural Palace. The cultural education of students in Chiatura is supported by the 'Actors' School' at the Culture Center, the State Ensemble of Dance and Song 'Changi,' folk dance ensembles: 'Merchkhali,' 'Pesevi,' and 'Ensemble-XXI,' the Georgian Folk Song Ensemble 'Imereti,' the School of Pop Music 'Natvrishvalli,' and the Ballroom Dance Studios 'Dance Forum,' 'Gracia,' and 'Elegance.' Every year on September 29, the population celebrates the traditional folk festival 'Chiaturoba,' dedicated to the city of Chiatura."
     },
     ka: {
+        "warning":"",
+        "article":"საინტერესო სტატია: ვაჟა-ფშაველა ჭიათურაში",
+        "blackgold":"ჭიათურის ასი წლისთავთან დაკავშირებით გამოცემული წიგნი, რომელიც ასახავს ჭიათურის განვითარებს ისტორიას, მრეწველობასა და კულტურას.",
+        "galaqtioni":"პოეტთა მეფის გალაკტიონის ლექსი შავ ოქროს ქალაქზე. საინტერესოა ის ფაქტი რომ გალაკტიონის მეუღლე ქალბატონი ოლია ოკუჯავა სწორედ ქალაქ ჭიათურაში განამწესეს პედაგოგად. ასე რომ რკინიგზის სადგურზე აუცილებლად ნახავთ დიდი გალაკტიონის ნაფეხურებს",
+        "turashvili":"ლეგენდარული ქართველი მწერლის დათო ტურაშვილის წიგნი ქალაქ ჭიათურაზე",
         "main": "მთავარი",
         "history": "ისტორია",
         "culture": "კულტურა",
