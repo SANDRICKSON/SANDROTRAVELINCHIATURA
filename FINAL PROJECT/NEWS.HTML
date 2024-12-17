@@ -114,13 +114,18 @@
         </p>
         <section id="video-gallery">
             <div class="video-frame">
-                <iframe width="100%" height="100%" 
-                        src="images/exhibition.mp4" 
-                        title="YouTube video" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
+                <iframe  
+                    src="images/exhibition.mp4" 
+                    title="Video Gallery" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
+                    allowfullscreen>
                 </iframe>
+            </div>
+        </section>
+        
+        
+
     <footer>
         <div class="footer-content">
             <a href="https://www.tbceducation.ge/">
@@ -135,6 +140,7 @@
         </div>
         <p>© 2024 ყველა უფლება დაცულია.</p>
     </footer>
+  
     <style>
         #video-gallery {
     display: grid;
@@ -156,7 +162,20 @@
     object-fit: cover; /* Ensures video maintains aspect ratio */
     border-radius: 10px;
 }
-    </style>
 
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    #video-gallery {
+        grid-template-columns: 1fr; /* Stack videos in a single column on smaller screens */
+    }
+
+    .video-frame iframe {
+        height: 180px; /* Slightly smaller on small screens */
+    }
+}
+
+    </style>
+    
+    
 </body>
 </html>
