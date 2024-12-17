@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="images/SANDRINIO.png" type="image/x-icon">
     
     <script src="js/videos.js"></script>
     <title>ვიდეოები</title>
@@ -84,15 +85,35 @@
                 
         
 
-        <section id="upload-video">
-            <h2>ვიდეოს ატვირთვა</h2>
-            <form id="video-upload-form" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="video-upload">აირჩიეთ ვიდეო:</label>
-                    <input type="file" id="video-upload" name="video" accept="video/*" required>
-                </div>
-                <button type="submit" id="uploadButton">ატვირთვა</button>
-            </form>
+    <section id="upload-video">
+        <h2 data-lang="upload-video">ვიდეოს ატვირთვა</h2>
+        <form id="video-upload-form" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="video-upload" data-lang="select-video">აირჩიეთ ვიდეო:</label>
+                <input type="file" id="video-upload" name="video" accept="video/*" required>
+            </div>
+            <button type="submit" id="uploadButton" data-lang="upload-button">ატვირთვა</button>
+        </form>
+    </section>
+    
+    <script>
+        document.getElementById('video-upload-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // ფორმის სტანდარტული გაგზავნის თავიდან აცილება
+            const videoFile = document.getElementById('video-upload').files[0];
+    
+            if (videoFile) {
+                const videoGallery = document.getElementById('video-gallery');
+                const videoElement = document.createElement('video');
+                videoElement.controls = true;
+                videoElement.width = 600;
+    
+                // დროებითი URL ვიდეოს ჩვენებისთვის
+                videoElement.src = URL.createObjectURL(videoFile);
+                videoGallery.appendChild(videoElement);
+            }
+        });
+    </script>
+    
         </section>
 
         <style>
