@@ -451,37 +451,53 @@ header .header-books img {
 /* Hover effect on button */
 .subscribe-btn:hover {
     background-color: #6a11cb;
-}.subscription-form input[type="email"] {
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 16px;
-    outline: none;
-    transition: all 0.3s ease;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
-/* Focus effect on input */
-.subscription-form input[type="email"]:focus {
-    border-color: #2575fc;
-    box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+
+
+
+
+
+
+
+
+.brand-mission, .product-quality {
+    margin: 30px auto;
+    text-align: center;
+    max-width: 800px;
+    line-height: 1.6;
 }
 
-/* Subscribe button */
-.subscribe-btn {
-    padding: 12px;
-    background-color: #2575fc;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-weight: bold;
+.brand-mission h2, .product-quality h2 {
+    color: #4CAF50;
+    margin-bottom: 15px;
 }
 
-/* Hover effect on button */
-.subscribe-btn:hover {
-    background-color: #6a11cb;
+.product-quality img {
+    margin-top: 15px;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+
+
+/* Fonts Style */
+
+.theatre{
+    font-family: "ALK Tall Mtavruli", sans-serif;
+    font-size: 29px;
+}
+
+.cable{
+    font-family: "ALK Tall Mtavruli", sans-serif;
+    font-size: 29px;
+}
+
+.chiaturoba{
+    
+        font-family: "ALK Tall Mtavruli", sans-serif;
+        font-size: 29px;
+    
+}
+
