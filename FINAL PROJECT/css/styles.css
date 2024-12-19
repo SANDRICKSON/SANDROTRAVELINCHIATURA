@@ -1,4 +1,4 @@
-body {
+body{
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: #333;
@@ -499,5 +499,95 @@ header .header-books img {
         font-family: "ALK Tall Mtavruli", sans-serif;
         font-size: 29px;
     
+}
+
+
+
+
+
+
+
+
+
+/* ღილაკის სტილი */
+.add-post-button {
+    background-color: #4CAF50; 
+    color: white; 
+    font-size: 16px; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-post-button:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+.add-post-button:active {
+    transform: scale(0.95); 
+}
+
+/* ფორმის სტილი */
+.form-container {
+    display: none; /* თავიდან დამალული */
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.form-container button {
+    margin-top: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #45a049;
+}
+
+.preview {
+    margin-top: 20px;
+}
+
+
+
+
+.cablecar-animation1 {
+    position: relative; /* საჭიროა ჰორიზონტალური მოძრაობისთვის */
+    animation: moveCableCarReverse 8s infinite alternate linear;
+}
+
+.cablecar-animation1 {
+    position: relative; /* საჭიროა ჰორიზონტალური მოძრაობისთვის */
+    animation: moveCableCarReverse 8s infinite alternate linear;
+}
+
+@keyframes moveCableCarReverse {
+    from {
+        left: 100%; /* მარჯვნიდან იწყებს */
+    }
+    to {
+        left: 0; /* მარცხნივ მოძრაობს */
+    }
 }
 
