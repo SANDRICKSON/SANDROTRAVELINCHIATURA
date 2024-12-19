@@ -1,5 +1,13 @@
 const translations = {
     en: {
+        "addition":"Add News",
+        "photo":"Image (Optional)",
+        "story":"Story",
+        "date":"Date",
+        "addtitle":"Title of an article",
+        "requiredtitle":"Add here a title - required",
+        "addhere":"Add news here",
+        "addnews":"Add news",
         "theatre":"Chiatura Theater turns 130 years old",
         "theatrenews":"Today, the Chiatura Theater turns 130. On December 11, 1894, the theater was founded in Chiatura, famous for its manganese production. The theater has had a permanent troupe since 1910 and has been making a worthy contribution to the development of Georgian culture for more than a century. During its 130 years, many performances have been successfully staged on the theater's stage. Distinguished directors have been at its helm, and actors who have played many memorable roles in Georgian theater and cinema have worked in the theater. It is especially proud for me that the theater continues its famous tradition with dignity today and continues to celebrate its anniversary with successful performances and premieres. I congratulate the collective of our famous theater, who brought this day to life with their high professionalism, enthusiasm and love. I wish the famous tradition to continue with dignity. We congratulate the audience and everyone for whom the treasure of our city is very precious. Here, I would like to pay tribute to the memory of all those people who have contributed to the progress and revival of our theater. Regarding the anniversary date, we have made a decision to declare 2025 the year of theater in Chiatura and celebrate it with various events, said the Mayor of Chiatura Municipality.",
         "news-title": "News - Chiatura",
@@ -23,6 +31,13 @@ const translations = {
     
     },
     ka: {
+        "addition":"დამატება",
+        "photo":"ფოტომასალა (ნებაყოფლობითი)",
+        "story":"ამბავი",
+        "date":"თარიღი",
+        "addtitle":"სათაური",
+        "addhere":"ახალი ამბის დამატება",
+        "addnews":"სიახლის დამატება",
         "theatre":"ჭიათურის თეატრი 130 წლის გახდა",
         "theatrenews":"დღეს ჭიათურის თეატრს 130 წელი შეუსრულდა.1894 წლის 11 დეკემბერს, მარგანეცის წარმოებით განთქმულ ჭიათურაში თეატრი დაარსდა. თეატრს 1910 წლიდან მუდმივმოქმედი დასი ჰყავს  და საუკენეზე მეტია,  ქართული კულტურის განვითრებაში ღირსეული წვლილი შეაქვს.130  წლის განმავლობაში თეატრის სცენაზე არაერთი სპექტაკლი  დაიდგა წარმატებით. მის სათავეებთან იდგნენ გამორჩეული რეჟისორები, ხოლო თეატრში მოღვაწეობდნენ მსახიობები,რომლებმაც ქართულ თეატრსა და კინოში არაერთი დასამახსოვრებელი როლი განასახიერა.ჩემთვის განსაკუთრებით საამაყოა, რომ  თეატრი დღესაც ღირსეულად აგრძელებს  სახელოვან ტრადიციას და კვლავაც წარმატებული სპექტაკლებით და პრემიერებით ხვდება იუბილეს. ვულოცავ  ჩვენი სახელოვანი თეატრის კოლექტივს, ვინც თავიანთი მაღალი პროფესიონალიზმით, ენთუზიაზმით და სიყვარულით დღევანდელი დღე  მოიტანა. ვუსურვებ  სახელოვანი  ტრადიციის  კვლავაც ღირსეულად გაგრძელებას .ვულოცავთ მაყურებელს და  ყველას, ვისთვისაც   ჩვენი ქალაქის  საგანძური ძალზე ძვირფასია . აქვე, პატივს მივაგებთ ყველა იმ ადამიანის ხსოვნას, ვისაც წვლილი მიუძღვის ჩვენი თეატრის წინსვლასა და აღორძინებაში.საიუბილეო თარიღთან დაკავშირებით, მივიღეთ გადაწყვეტილება, - 2025 წელი  ჭიათურაში თეატრის წლად  გამოცხადდეს  და  შესაბამისად აღინიშნოს სხვადასხვა ღონისძიებებით",
         "news-title": "სიახლეები - ჭიათურა",
@@ -55,3 +70,83 @@ function changeLanguage(lang) {
         element.textContent = translations[lang][key];
     });
 }
+
+
+
+// ფორმის გამოჩენა
+function showForm() {
+    document.getElementById("postForm").style.display = "block";
+}
+
+// სურათის პრევიუს ფუნქციონალი
+document.getElementById("postImage").addEventListener("change", function (e) {
+    const previewContainer = document.getElementById("imagePreview");
+    previewContainer.innerHTML = ""; // Clear previous preview
+
+    const file = e.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function (event) {
+            const img = document.createElement("img");
+            img.src = event.target.result;
+            img.alt = "ატვირთული სურათი";
+            img.style.maxWidth = "100%";
+            img.style.maxHeight = "200px";
+            previewContainer.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    }
+});
+
+// პოსტის გამოქვეყნება
+document.getElementById("postForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Input values
+    const date = document.getElementById("postDate").value;
+    const content = document.getElementById("postContent").value;
+    const imageFile = document.getElementById("postImage").files[0];
+
+    // Check if required fields are filled
+    if (!date || !content.trim()) {
+        alert("გთხოვთ შეავსოთ ყველა სავალდებულო ველი!");
+        return;
+    }
+
+    // Create post container
+    const postDiv = document.createElement("div");
+    postDiv.classList.add("post");
+
+    // Create date element
+    const postDate = document.createElement("p");
+    postDate.textContent = `თარიღი: ${date}`;
+
+    // Create content element
+    const postContent = document.createElement("p");
+    postContent.textContent = content;
+
+    // Append elements to postDiv
+    postDiv.appendChild(postDate);
+    postDiv.appendChild(postContent);
+
+    // Add image if uploaded
+    if (imageFile) {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const postImage = document.createElement("img");
+            postImage.src = e.target.result;
+            postImage.alt = "პოსტის სურათი";
+            postImage.style.maxWidth = "100%";
+            postImage.style.marginTop = "10px";
+            postDiv.appendChild(postImage);
+        };
+        reader.readAsDataURL(imageFile);
+    }
+
+    // Add postDiv to postList
+    document.getElementById("postList").appendChild(postDiv);
+
+    // Clear form fields and preview
+    document.getElementById("postForm").reset();
+    document.getElementById("imagePreview").innerHTML = "";
+});
