@@ -51,24 +51,25 @@
 
 
     <section class="section">
-        <button onclick="toggleForm()" class="styled-button">სიახლის დამატება</button>
+        <button onclick="toggleForm()" class="styled-button" data-lang="addnews">სიახლის დამატება</button>
         <h2 data-lang="news-header">სიახლეები</h2>
         <div class="news-form" id="newsForm">
-            <h3>ახალი ამბის დამატება</h3>
+            <h3 data-lang="addhere">ახალი ამბის დამატება</h3>
             <form id="addNewsForm">
-                <label for="title">სათაური:</label><br>
-                <input type="text" id="title" name="title" required placeholder="ჩაწერეთ სათაური -  სავალდებულო"><br><br>
+                <label for="title" data-lang="addtitle">სათაური:</label><br>
+                <input type="text" id="title" name="title" required placeholder="ჩაწერეთ სათაური -  სავალდებულო" data-lang="requiredtitle"><br><br>
+
         
-                <label for="date">თარიღი:</label><br>
+                <label for="date" data-lang="date">თარიღი:</label><br>
                 <input type="date" id="date" name="date" required><br><br>
         
-                <label for="story">ამბავი:</label><br>
+                <label for="story" data-lang="story">ამბავი:</label><br>
                 <textarea id="story" name="story" required placeholder="ჩაწერეთ სიახლე - სავალდებულო"></textarea><br><br>
         
-                <label for="image">ფოტომასალა (ნებაყოფლობითი):</label><br>
+                <label for="image" data-lang="photo">ფოტომასალა (ნებაყოფლობითი):</label><br>
                 <input type="file" id="image" name="image"><br><br>
         
-                <input type="submit" value="დამატება" class="submit-button">
+                <input type="submit" value="დამატება" class="submit-button" data-lang="addition">
             </form>
         </div>
         
