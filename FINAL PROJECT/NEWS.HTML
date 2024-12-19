@@ -35,12 +35,221 @@
             </div>
         </nav>
     </header>
+
+
+
+
     
+
+
+
+
+
+
+   
+    
+
+
     <section class="section">
+        <button onclick="toggleForm()" class="styled-button">სიახლის დამატება</button>
         <h2 data-lang="news-header">სიახლეები</h2>
+        <div class="news-form" id="newsForm">
+            <h3>ახალი ამბის დამატება</h3>
+            <form id="addNewsForm">
+                <label for="title">სათაური:</label><br>
+                <input type="text" id="title" name="title" required placeholder="ჩაწერეთ სათაური -  სავალდებულო"><br><br>
+        
+                <label for="date">თარიღი:</label><br>
+                <input type="date" id="date" name="date" required><br><br>
+        
+                <label for="story">ამბავი:</label><br>
+                <textarea id="story" name="story" required placeholder="ჩაწერეთ სიახლე - სავალდებულო"></textarea><br><br>
+        
+                <label for="image">ფოტომასალა (ნებაყოფლობითი):</label><br>
+                <input type="file" id="image" name="image"><br><br>
+        
+                <input type="submit" value="დამატება" class="submit-button">
+            </form>
+        </div>
+        
+        <div class="news-display" id="newsDisplay"></div>
         <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">
             11.12.24
           </p>
+
+
+
+<style>
+    .date-style{
+        font-size: 24px;
+        text-align: center;
+        color: white;
+        margin-bottom: 20px;
+    }
+    /* ღილაკის სტილი */
+    .styled-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px 30px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .styled-button:hover {
+        background-color: #45a049;
+    }
+
+    .styled-button:focus {
+        outline: none;
+    }
+
+    /* ფორმის სტილები */
+    .news-form {
+        display: none;
+        margin-top: 30px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .news-form h3 {
+        font-size: 24px;
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+        font-family: "ALK Tall Mtavruli", sans-serif;
+        font-size: 29px;
+    }
+
+    input[type="text"], input[type="date"], textarea, input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    textarea {
+        height: 150px;
+        resize: vertical;
+    }
+
+    .submit-button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+        background-color: #45a049;
+    }
+
+    /* თარიღის სტილი */
+    .date-style {
+        display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;
+    }
+
+    /* სიახლის გამოჩენის სტილები */
+    .news-display {
+        margin-top: 30px;
+    }
+
+    .news-display h3 {
+        font-size: 24px;
+        color: #333;
+       
+    }
+
+    .news-display p {
+        font-size: 16px;
+        color: #555;
+        font-family: "ALK Tall Mtavruli", sans-serif;
+        font-size: 29px;
+    }
+
+
+</style>
+
+<script>
+    let editMode = false; // ნიშანი იმისთვის, რედაქტირებას ეთანხმება
+
+    function toggleForm(newsItem = null) {
+        const form = document.getElementById('newsForm');
+        form.style.display = form.style.display === 'none' ? 'block' : 'none';
+
+        if (newsItem) {
+            // რედაქტირების რეჟიმი
+            editMode = true;
+            document.getElementById('title').value = newsItem.title;
+            document.getElementById('date').value = newsItem.date;
+            document.getElementById('story').value = newsItem.story;
+            // აქ უნდა იყოს ფოტოს ფორმატირება თუ იქნება რედაქტირება (მაგ. Base64 string ფორმატში)
+        } else {
+            editMode = false;
+        }
+    }
+    
+    document.getElementById('addNewsForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        const title = document.getElementById('title').value;
+        const date = document.getElementById('date').value;
+        const story = document.getElementById('story').value;
+        const image = document.getElementById('image').files[0];
+    
+        let newsHTML = `<section class="section">`;
+        newsHTML += `<p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">${date}</p>`;
+        newsHTML += `<p><b>${title}</b></p>`;
+        newsHTML += `<p>${story}</p>`;
+    
+        if (image) {
+            const reader = new FileReader();
+            reader.onload = function() {
+                newsHTML += `<img src="${reader.result}" alt="News Image" style="width: 100px; height: 100px;">`;
+                newsHTML += `</section>`;
+                document.getElementById('newsDisplay').innerHTML = newsHTML;
+            };
+            reader.readAsDataURL(image);
+        } else {
+            newsHTML += `</section>`;
+            document.getElementById('newsDisplay').innerHTML = newsHTML;
+        }
+
+        // Clear the form
+        document.getElementById('addNewsForm').reset();
+        toggleForm();  // Hide the form after submission
+
+        // Check if in edit mode
+        if (editMode) {
+            // Update existing news item if needed
+            editMode = false;  // Exit edit mode after saving
+        }
+    });
+</script>
+
+
 
 
 
