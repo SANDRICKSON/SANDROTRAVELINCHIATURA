@@ -6,6 +6,7 @@
     <title>პირადი მონაცემების პოლიტიკა</title>
     <link rel="shortcut icon" href="images/SANDRINIO.png" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/privacy.js"></script>
 </head>
 <body>
 
@@ -27,19 +28,23 @@
                 <li><a href="AUTH/login.html" data-lang="log-in"><b>Log In</b></a></li>
                 <li><a href="AUTH/register.html" data-lang="register"><b>Register</b></a></li>
             </ul>
+            <div class="language-buttons">
+                <button class="btn btn-warning" onclick="changeLanguage('ka')">ქართული</button>
+                <button class="btn btn-success" onclick="changeLanguage('en')">English</button>
+            </div>
         </nav>
     </header>
 
     <section class="section privacy-policy">
-        <h1 class="section-title">პირადი მონაცემების პოლიტიკა</h1>
+        <h1 class="section-title" data-lang="privacy">პირადი მონაცემების პოლიტიკა</h1>
     
-        <p class="intro-text">
+        <p class="intro-text" data-lang="care">
             ჩვენ ვუფრთხილდებით თქვენს პირად მონაცემებს და ვმოქმედებთ თქვენი ინფორმაციის დაცვით. 
             ეს პირადი მონაცემების პოლიტიკა ადგენს იმ პრინციპებს, რომელთა მიხედვითაც ჩვენ ვაკონტროლებთ, ვიძიებთ და ვმოქმედებთ თქვენს მიერ მოწოდებულ მონაცემებზე.
         </p>
     
-        <h2 class="subheading">1. შეგროვებული მონაცემები</h2>
-        <p class="paragraph">
+        <h2 class="subheading" data-lang="datas">1. შეგროვებული მონაცემები</h2>
+        <p class="paragraph" data-lang="info">
             ჩვენ შეგვიძლია მოვიპოვოთ შემდეგი ტიპის ინფორმაცია:
         </p>
         <ul class="data-list">
