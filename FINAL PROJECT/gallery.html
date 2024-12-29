@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>გალერეა - ჭიათურა</title>
     <link rel="shortcut icon" href="images/SANDRINIO.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/gallery.js" defer></script>
 </head>
@@ -19,14 +20,14 @@
                 <li><a href="culture.html" data-lang="culture">კულტურა</a></li>
                 <li><a href="tourism.html" data-lang="tourism">ტურიზმი</a></li>
                 <li><a href="gallery.html" data-lang="gallery">გალერეა</a></li>
-                <li><a href="TIMETABLES.HTML" data-lang="timetable">განრიგი</a></li>
-                <li><a href="NEWS.HTML" data-lang="news">სიახლეები</a></li>
+                <li><a href="timetables.html" data-lang="timetable">განრიგი</a></li>
+                <li><a href="news.html" data-lang="news">სიახლეები</a></li>
                 <li><a href="aboutproject.html" data-lang="project" class="active">პროექტის შესახებ</a></li>
                 <li><a href="blogs.html" data-lang="videos">ვიდეოები</a></li>
                 <li><a href="contact.html" data-lang="contact">კონტაქტი</a></li>
                 <li><a href="books.html" data-lang="books">წიგნები</a></li>
-                <li><a href="AUTH/login.html" data-lang="log-in"><b>Log In</b></a></li>
-                <li><a href="AUTH/register.html" data-lang="register"><b>Register</b></a></li>
+                <li><a href="AUTH/login.html" data-lang="log-in"><b>შესვლა</b></a></li>
+                <li><a href="AUTH/register.html" data-lang="register"><b>რეგისტრაცია</b></a></li>
             </ul>
             <div class="language-buttons">
                 <button class="btn btn-warning" onclick="changeLanguage('ka')">ქართული</button>
@@ -41,14 +42,14 @@
         <h2 data-lang="gallery-title">გალერეა</h2>
         <p data-lang="gallery-text">იხილეთ ქალაქის ულამაზესი ხედები და მნიშვნელოვანი ადგილები.</p>
 
-        <!-- Upload Section -->
+        
         <div class="upload-section">
             <input type="file" id="imageUpload" accept="image/*">
             <button id="uploadButton" data-lang="upload-btn">ატვირთვა</button>
             <b data-lang="urlsoon"> მალე ბმულით ატვირთვაც დაემატება</b>
         </div>
         
-        <!-- Gallery Section -->
+        
         <div class="gallery-container" id="galleryContainer">
             <div class="gallery-item">
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk1wlSc2srLC540Ng55LFmug38x7WKl08pYw&s" alt="Chiatura 1" class="gallery-img">
@@ -94,7 +95,6 @@
         </div>
         <p data-lang="copyright">© 2024 ყველა უფლება დაცულია.</p>
     </footer>
-    
     
 </body>
 </html>
