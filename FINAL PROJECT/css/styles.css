@@ -590,3 +590,60 @@ header .header-books img {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.Georgian {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #ffcc00; /* ოქროსფერი */
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fff8dc; /* ღია ოქროსფერი */
+    color: #ff9900; /* მუქი ოქროსფერი */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Georgian:hover {
+    background-color: #ffcc00; /* მუქი ოქროსფერი */
+    color: #fff; /* თეთრი */
+    border-color: #ff9900; /* მუქი ოქროსფერი */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.English {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 5px;
+    border: 2px solid #007bff; /* ლურჯი */
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #e7f0ff; /* ღია ლურჯი */
+    color: #0056b3; /* მუქი ლურჯი */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.English:hover {
+    background-color: #007bff; /* მუქი ლურჯი */
+    color: #fff; /* თეთრი */
+    border-color: #0056b3; /* მუქი ლურჯი */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
