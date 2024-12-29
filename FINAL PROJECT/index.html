@@ -72,54 +72,223 @@
         <img src="images/good.png" alt="საბაგირო სტიკერი" class="img-fluid cablecar-animation1" height="250px" width="250">
     </div>
 
-    <div class="chatbot-container">
-        <a href="https://www.animachatbotics.com/chatbot/Chat/4449" class="chatbot-link">
-            <div class="bot-card">
-                <img src="images/BOT1.jpg" alt="გიდბოტი ეკა" class="bot-image">
-                <div class="bot-content">
-                    <h3 data-lang="eka">გიდბოტი ეკა</h3>
-                    <p data-lang="testmode">სატესტო რეჟიმში მომუშავე ჩეთბოტი</p>
-                    <p class="cta-text" data-lang="click">დააჭირეთ სურათს რათა ილაპარაკოთ</p>
+    <div class="chatbots-container">
+        <div class="chatbot-container">
+            <a href="https://www.animachatbotics.com/chatbot/Chat/4449" class="chatbot-link">
+                <div class="bot-card">
+                    <img src="images/BOT1.jpg" alt="გიდბოტი ეკა" class="bot-image">
+                    <div class="bot-content">
+                        <h3 class="bot-title" data-lang="eka">გიდბოტი ეკა</h3>
+                        <p class="bot-description" data-lang="testmode">სატესტო რეჟიმში მომუშავე ჩეთბოტი</p>
+                        <p class="cta-text" data-lang="click">დააჭირეთ სურათს რათა ილაპარაკოთ</p>
+                    </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
+    
+        <div class="chatbot-container">
+            <a href="https://drive.google.com/file/d/18PlKjeuSdbkeexWWo3sm0I4rsiiiSF7q/view?usp=sharing" class="chatbot-link">
+                <div class="bot-card">
+                    <img src="images/download.png" alt="Explore Chiatura App" class="bot-image">
+                    <div class="bot-content">
+                        <h3 class="bot-title" data-lang="app">ჩამოტვირთეთ შესაბამისი აპლიკაცია</h3>
+                        <p class="bot-description" data-lang="testapp">Explore Chiatura სატესტო რეჟიმში მომუშავე აპი</p>
+                        <p class="cta-text" data-lang="scan">დაასკანერე ან დააკლიკე ჩამოსატვირთად</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="chatbot-container">
+            <a href="https://www.facebook.com/profile.php?id=61563291839085" class="chatbot-link">
+                <div class="bot-card">
+                    <img src="images/psychobot.png" alt="Psychobot Medea" class="bot-image">
+                    <div class="bot-content">
+                        <h3 class="bot-title" data-lang="like">შეიძლება ასევე მოგეწონოთ</h3>
+                        <p class="bot-description" data-lang="medea">ჩეთბოტი მედეა</p>
+                        <p class="cta-text" data-lang="page">მოიწონე Facebook გვერდი</p>
+                    </div>
+                </div>
+            </a>
+        </div>
     </div>
     
-    <div class="chatbot-container">
-        <a href="https://drive.google.com/file/d/18PlKjeuSdbkeexWWo3sm0I4rsiiiSF7q/view?usp=sharing" class="chatbot-link">
-            <div class="bot-card">
-                <img src="images/download.png" alt="Explore Chiatura" class="bot-image">
-                <div class="bot-content">
-                    <h3 data-lang="app">ჩამოტვირთეთ შესაბამისი აპლიკაცია</h3>
-                    <p data-lang="testapp">Explore Chiatura სატესტო რეჟიმში მომუშავე აპი</p>
-                    <p class="cta-text" data-lang="scan">დაასკანერე ან დააკლიკე ჩამოსატვირთად</p>
-                </div>
-            </div>
-        </a>
+    <div class="subscription-container">
+        <div class="subscription-form-container">
+            <h2 class="subscription-title" data-lang="subscription">გამოიწერეთ სიახლეები</h2>
+            <p class="subscription-description" data-lang="write">
+                ჩაწერეთ თქვენი მეილი და მიიღეთ უახლესი ინფორმაციები სისტემატიურად.
+            </p>
+            <form action="javascript:void(0);" method="POST" class="subscription-form" onsubmit="alert('თქვენი გამოწერა შესრულებულია');">
+                <input data-lang="mail" type="email" name="email" placeholder="ჩაწერეთ მეილი" required>
+                <button type="submit" class="subscribe-btn" data-lang="subscribe">გამოწერა</button>
+            </form>
+        </div>
     </div>
+    
+<style>
+    /* Общие настройки для контейнера */
+.chatbots-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 20px;
+}
 
-    <div class="chatbot-container">
-        <a href="https://www.facebook.com/profile.php?id=61563291839085" class="chatbot-link">
-            <div class="bot-card">
-                <img src="images/psychobot.png" alt="Explore Chiatura" class="bot-image">
-                <div class="bot-content">
-                    <h3 data-lang="like">შეიძლება ასევე მოგეწონოთ</h3>
-                    <p data-lang="medea">ჩეთბოტი მედეა</p>
-                    <p class="cta-text" data-lang="page">მოიწონე Facebook გვერდი</p>
-                </div>
-            </div>
-        </a>
-    </div>
+/* Контейнеры для каждого чатбота */
+.chatbot-container {
+    width: 30%;
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    <div class="subscription-form-container">
-        <h2 data-lang="subscription">გამოიწერეთ სიახლეები</h2>
-        <p data-lang="write">ჩაწერეთ თქვენი მეილი და მიიღეთ უახლესი ინფორმაციები სისტემატიურად.</p>
-        <form action="javascript:void(0);" method="POST" class="subscription-form" onsubmit="alert('თქვენი გამოწერა შესრულებულია');">
-            <input data-lang="mail" type="email" name="email" placeholder="ჩაწერეთ მეილი" required>
-            <button type="submit" class="subscribe-btn" data-lang="subscribe">გამოწერა</button>
-        </form>
-    </div>
+.chatbot-container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
 
+/* Стили для карточки бота */
+.bot-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bot-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #ddd;
+}
+
+.bot-content {
+    padding: 15px;
+}
+
+.bot-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.bot-description {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.cta-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007BFF;
+    cursor: pointer;
+}
+
+/* Кнопка для подписки */
+.subscription-container {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.subscription-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.subscription-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subscription-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.subscription-form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.subscription-form button[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.subscription-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Контейнер для всего кервуса */
+.section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+/* Картинки внутри карусели */
+.carousel-inner img {
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Эффект наведения на картинку */
+.carousel-inner img:hover {
+    transform: scale(1.05);
+}
+
+/* Стиль для кнопок карусели */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Темный фон для иконок */
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на кнопки */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Дополнительный блок изображения снизу */
+section .section > div {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+section .section img {
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Эффект при наведении на дополнительную картинку */
+section .section img:hover {
+    transform: scale(1.1);
+}
+
+
+</style>
     <!-- Updated footer -->
     <footer>
         <div class="footer-content">
@@ -135,10 +304,9 @@
         </div>
         <p data-lang="copyright">© 2024 ყველა უფლება დაცულია.</p>
     </footer>
-
-
-
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </style>
 </body>
 </html>
