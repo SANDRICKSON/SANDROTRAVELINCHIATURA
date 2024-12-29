@@ -1,5 +1,7 @@
 const translations = {
     en: {
+        "virto":"Virtual Tour In Chiatura",
+       "gallery1":"Gallery of videos",
        "main": "Home",
         "history": "History",
         "culture": "Culture",
@@ -14,9 +16,13 @@ const translations = {
         "log-in": "Log In",
         "register": "Register",
         "culture-header": "Culture",
+        "upload-video":"Upload Video",
         "culture-text": "The city has cultural institutions such as the Akaki Tsereteli Drama Theatre, a cinema-theatre, the Palace of Rituals, the House of the Artist, the Chiatura Regional Museum, and the Cultural Palace. The cultural education of students in Chiatura is supported by the 'Actors' School' at the Culture Center, the State Ensemble of Dance and Song 'Changi,' folk dance ensembles: 'Merchkhali,' 'Pesevi,' and 'Ensemble-XXI,' the Georgian Folk Song Ensemble 'Imereti,' the School of Pop Music 'Natvrishvalli,' and the Ballroom Dance Studios 'Dance Forum,' 'Gracia,' and 'Elegance.' Every year on September 29, the population celebrates the traditional folk festival 'Chiaturoba,' dedicated to the city of Chiatura."
     },
     ka: {
+        "upload-video":"ვიდეოს ატვირთვა",
+        "virto":"ვირტუალური ტური ჭიათურაში",
+        "gallery1":"ვიდეოების გალერეა",
         "main": "მთავარი",
         "history": "ისტორია",
         "culture": "კულტურა",
@@ -38,7 +44,7 @@ const translations = {
 
 
 document.getElementById('video-upload-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // ფორმის სტანდარტული გაგზავნის თავიდან აცილება
+    event.preventDefault(); 
     const videoFile = document.getElementById('video-upload').files[0];
 
     if (videoFile) {
@@ -47,11 +53,12 @@ document.getElementById('video-upload-form').addEventListener('submit', function
         videoElement.controls = true;
         videoElement.width = 600;
 
-        // დროებითი URL ვიდეოს ჩვენებისთვის
+        
         videoElement.src = URL.createObjectURL(videoFile);
         videoGallery.appendChild(videoElement);
     }
 });
+
 
 
 
