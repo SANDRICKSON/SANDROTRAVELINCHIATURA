@@ -1,5 +1,6 @@
 const translations = {
     en: {
+        "buy":"Click here to purchase:",
         "warning":"An article is only in Georgian",
         "article":"An Interesting Article: Vazha-Pshavela in Chiatura",
         "blackgold":"A book published on the occasion of the centennial of Chiatura, which reflects the development, history, industry, and culture of Chiatura.",
@@ -19,9 +20,11 @@ const translations = {
         "log-in": "Log In",
         "register": "Register",
         "culture-header": "Culture",
-        "culture-text": "The city has cultural institutions such as the Akaki Tsereteli Drama Theatre, a cinema-theatre, the Palace of Rituals, the House of the Artist, the Chiatura Regional Museum, and the Cultural Palace. The cultural education of students in Chiatura is supported by the 'Actors' School' at the Culture Center, the State Ensemble of Dance and Song 'Changi,' folk dance ensembles: 'Merchkhali,' 'Pesevi,' and 'Ensemble-XXI,' the Georgian Folk Song Ensemble 'Imereti,' the School of Pop Music 'Natvrishvalli,' and the Ballroom Dance Studios 'Dance Forum,' 'Gracia,' and 'Elegance.' Every year on September 29, the population celebrates the traditional folk festival 'Chiaturoba,' dedicated to the city of Chiatura."
+        "culture-text": "The city has cultural institutions such as the Akaki Tsereteli Drama Theatre, a cinema-theatre, the Palace of Rituals, the House of the Artist, the Chiatura Regional Museum, and the Cultural Palace. The cultural education of students in Chiatura is supported by the 'Actors' School' at the Culture Center, the State Ensemble of Dance and Song 'Changi,' folk dance ensembles: 'Merchkhali,' 'Pesevi,' and 'Ensemble-XXI,' the Georgian Folk Song Ensemble 'Imereti,' the School of Pop Music 'Natvrishvalli,' and the Ballroom Dance Studios 'Dance Forum,' 'Gracia,' and 'Elegance.' Every year on September 29, the population celebrates the traditional folk festival 'Chiaturoba,' dedicated to the city of Chiatura.",
+        
     },
     ka: {
+        "buy":"შესაძენად დააკლიკეთ აქ:",
         "warning":"",
         "article":"საინტერესო სტატია: ვაჟა-ფშაველა ჭიათურაში",
         "blackgold":"ჭიათურის ასი წლისთავთან დაკავშირებით გამოცემული წიგნი, რომელიც ასახავს ჭიათურის განვითარებს ისტორიას, მრეწველობასა და კულტურას.",
@@ -61,3 +64,4 @@ function changeLanguage(lang) {
         }
     });
 }
+
