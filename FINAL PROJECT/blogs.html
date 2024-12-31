@@ -105,7 +105,16 @@
 
             </div>
         </section>
-        
+        <section id="upload-video">
+            <h2 data-lang="upload-video">ვიდეოს ატვირთვა</h2>
+            <form id="video-upload-form" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="video-upload" data-lang="select-video">აირჩიეთ ვიდეო:</label>
+                    <input type="file" id="video-upload" name="video" accept="video/*" required>
+                </div>
+                <button type="submit" id="uploadButton" data-lang="upload-button">ატვირთვა</button>
+            </form>
+        </section>
         </div>
     </section>
     
@@ -118,23 +127,22 @@
             <strong>ასევე შეიძლება მოგეწონოთ</strong><br>
             მრავალ საერთაშორისო ფესტივალზე წარდგენილი ფილმი <span style="color: #007BFF;">"ჭიათურა"</span>
         </p>
-        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 20px;">
             <img src="images/film.webp" alt="ფილმის აფიშა" style="width: 100%; max-width: 380px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
             <img src="images/chiaturafilm.jpg" alt="ჭიათურას კადრები" style="width: 100%; max-width: 380px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+        </div>
+        <div style="text-align: center;">
+            <a href="https://global.cavea.plus/ka/movies/chiatura" target="_blank" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: #fff; background-color: #007BFF; padding: 10px 20px; border-radius: 5px; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease;">
+                <img src="images/watchfilm.png" alt="პლეის აიკონი" style="width: 20px; height: 20px;">
+                ფილმის ყურება
+            </a>
         </div>
     </div>
     
     
-    <section id="upload-video">
-        <h2 data-lang="upload-video">ვიდეოს ატვირთვა</h2>
-        <form id="video-upload-form" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="video-upload" data-lang="select-video">აირჩიეთ ვიდეო:</label>
-                <input type="file" id="video-upload" name="video" accept="video/*" required>
-            </div>
-            <button type="submit" id="uploadButton" data-lang="upload-button">ატვირთვა</button>
-        </form>
-    </section>
+    </div>
+    
+    
     
     <script>
         document.getElementById('video-upload-form').addEventListener('submit', function(event) {
