@@ -1,5 +1,6 @@
 const translations = {
     en: {
+        "copyright":"© 2024 All Rigths Reserved",
         "main": "Home",
         "history": "History",
         "culture": "Culture",
@@ -19,6 +20,7 @@ const translations = {
         "urlsoon": "A link upload will be added soon"
     },
     ka: {
+        "copyright":"© 2024 ყველა უფლება დაცულია",
         "main": "მთავარი",
         "history": "ისტორია",
         "culture": "კულტურა",
@@ -30,8 +32,8 @@ const translations = {
         "videos": "ვიდეოები",
         "contact": "კონტაქტი",
         "books": "წიგნები",
-        "log-in": "შესვლა",
-        "register": "რეგისტრაცია",
+        "log-in": "Log In",
+        "register": "Registration",
         "gallery-title": "გალერეა",
         "gallery-text": "იხილეთ ქალაქის ულამაზესი ხედები და მნიშვნელოვანი ადგილები.",
         "upload-btn": "ატვირთვა",
@@ -45,12 +47,12 @@ function changeLanguage(lang) {
         const key = element.getAttribute("data-lang");
         element.textContent = translations[lang][key];
     });
-    // ატვირთვის პროცესისთვის შეტყობინების ტექსტის განახლება
+    
     document.getElementById("uploadButton").textContent = translations[lang]["upload-btn"];
     document.getElementById("uploadButton").setAttribute("data-alert", translations[lang]["upload-alert"]);
 }
 
-// სურათის ატვირთვის ფუნქცია
+
 document.getElementById("uploadButton").addEventListener("click", function () {
     const fileInput = document.getElementById("imageUpload");
     const galleryContainer = document.getElementById("galleryContainer");
@@ -77,4 +79,3 @@ document.getElementById("uploadButton").addEventListener("click", function () {
         alert(document.getElementById("uploadButton").getAttribute("data-alert"));
     }
 });
-
