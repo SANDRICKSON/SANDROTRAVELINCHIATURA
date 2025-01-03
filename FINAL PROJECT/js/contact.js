@@ -16,9 +16,11 @@ const translations = {
         name: "სახელი",
         mail: "ელფოსტა",
         message: "მესიჯი",
-        send: "გაგზავნა"
+        send: "გაგზავნა",
+        "copyright":"© 2024 ყველა უფლება დაცულია",
     },
     en: {
+        "copyright":"© 2024 All Rigths Reserved",
         main: "Home",
         history: "History",
         culture: "Culture",
