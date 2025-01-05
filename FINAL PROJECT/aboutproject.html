@@ -11,7 +11,7 @@
     <title>პროექტის შესახებ</title>
 </head>
 <body>
-      <header>
+    <header>
         <nav class="navbar">
             <ul class="nav-menu">
                 <img src="images/SANDRINIO.png" alt="Logo" class="logo" height="100"></a></li>
@@ -24,8 +24,8 @@
                 <li><a href="NEWS.HTML" data-lang="news">სიახლეები</a></li>
                 <li><a href="aboutproject.html" data-lang="project" class="active">პროექტის შესახებ</a></li>
                 <li><a href="blogs.html" data-lang="videos">ვიდეოები</a></li>
-                <li><a href="contact.html" data-lang="contact">კონტაქტი</a></li>
                 <li><a href="books.html" data-lang="books">წიგნები</a></li>
+                <li><a href="contact.html" data-lang="contact">კონტაქტი</a></li>
                 <li><a href="AUTH/login.html" data-lang="log-in"><b>Log In</b></a></li>
                 <li><a href="AUTH/register.html" data-lang="register"><b>Register</b></a></li>
             </ul>
@@ -35,6 +35,7 @@
             </div>
         </nav>
     </header>
+    
 
     <main>
         <section class="hero">
@@ -85,78 +86,88 @@
             <button class="resume">სანდრო ქათამაძის რეზიუმე</button>
         </a>
         
-
         <style>
 
-            .resume{
-                background-color: orange;
-                color: white;
-            }
+.resume{
+            background-color: orange;
+            color: white;
+        }
 
-            .doctorbot{
-                background-color: red;
-                color: white;
-            }
+        .doctorbot{
+            background-color: red;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px 0;
+        }
+    
+        
+        .download-civlab {
+            background-color: #4CAF50; 
+            color: white;
+        }
+    
+        .download-civlab:hover {
+            background-color: #45a049;
+        }
+    
+        
+        .download-book {
+            background-color: #FF5722; 
+            color: white;
+        }
+    
+        .download-book:hover {
+            background-color: #e64a19;
+        }
+    
+        
+        .download-storybook {
+            background-color: #9C27B0; 
+            color: white;
+        }
+    
+        .download-storybook:hover {
+            background-color: #8e24aa;
+        }
+    
+        
+        .psychobot-button {
+            background-color: #008CBA; 
+            color: white;
+        }
+    
+        .psychobot-button:hover {
+            background-color: #007bb5;
+        }
+    
+        button:active {
+            transform: scale(0.98); 
+        }
+    
+       
+
+        .rights {
+color: grey;
+font-weight: bold;
+font-size: 18px;
+letter-spacing: 1px;
+}
 
 
-            button {
-                padding: 10px 20px;
-                font-size: 16px;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-                margin: 10px 0;
-            }
-        
-            /* CIVLAB ღილაკის ფერი */
-            .download-civlab {
-                background-color: #4CAF50; /* მწვანე */
-                color: white;
-            }
-        
-            .download-civlab:hover {
-                background-color: #45a049;
-            }
-        
-            /* BOOK ღილაკის ფერი */
-            .download-book {
-                background-color: #FF5722; /* ფორთოხალი */
-                color: white;
-            }
-        
-            .download-book:hover {
-                background-color: #e64a19;
-            }
-        
-            /* STORYBOOK ღილაკის ფერი */
-            .download-storybook {
-                background-color: #9C27B0; /* იისფერი */
-                color: white;
-            }
-        
-            .download-storybook:hover {
-                background-color: #8e24aa;
-            }
-        
-            /* psychobot ღილაკის ფერი */
-            .psychobot-button {
-                background-color: #008CBA; /* ლურჯი */
-                color: white;
-            }
-        
-            .psychobot-button:hover {
-                background-color: #007bb5;
-            }
-        
-            button:active {
-                transform: scale(0.98); /* აქტიური ღილაკი */
-            }
-        
-            a {
-                text-decoration: none; /* ბმულზე ხაზის მოცილება */
-            }
-        </style>
+.section {
+    padding: 50px;
+    text-align: center;
+}
+
+</style>
 </body>
 </html>
 
@@ -176,7 +187,7 @@
             </ul>
             
         </div>
-        <p data-lang="copyright">© 2024 ყველა უფლება დაცულია.</p>
+        <p data-lang="copyright" class="rights">© 2024 ყველა უფლება დაცულია</p>
     </footer>
 </body>
 </html>
