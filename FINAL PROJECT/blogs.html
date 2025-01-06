@@ -68,7 +68,7 @@
                         allowfullscreen>
                 </iframe>
             </div>
-            
+
             <div class="video-frame"> 
                 <p data-lang="virto"><b></b></p>
                 <iframe 
@@ -81,7 +81,7 @@
                     allowfullscreen>
                 </iframe>
             </div>
-            
+
             <div class="video-frame"> 
                 <iframe 
                     width="100%" 
@@ -93,15 +93,9 @@
                     allowfullscreen>
                 </iframe>
             </div>
-            
-                       
+
                 </iframe>
             </div>
-    
-
-
-
-
 
             </div>
         </section>
@@ -117,11 +111,11 @@
         </section>
         </div>
     </section>
-    
+
     <a href="https://360georgia.ge/tour/%e1%83%ad%e1%83%98%e1%83%90%e1%83%97%e1%83%a3%e1%83%a0%e1%83%90/" class="btn virtual-tour-link">
         ვირტუალური ტური
     </a>
-    
+
     <div style="max-width: 800px; margin: 30px auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; background-color: #f9f9f9; font-family: Arial, sans-serif; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
         <p style="font-size: 20px; color: #444; text-align: center; line-height: 1.6; margin-bottom: 20px;">
             <strong>ასევე შეიძლება მოგეწონოთ</strong><br>
@@ -138,30 +132,26 @@
             </a>
         </div>
     </div>
-    
-    
+
     </div>
-    
-    
-    
+
     <script>
         document.getElementById('video-upload-form').addEventListener('submit', function(event) {
             event.preventDefault(); 
             const videoFile = document.getElementById('video-upload').files[0];
-    
+
             if (videoFile) {
                 const videoGallery = document.getElementById('video-gallery');
                 const videoElement = document.createElement('video');
                 videoElement.controls = true;
                 videoElement.width = 600;
-    
-                
+
                 videoElement.src = URL.createObjectURL(videoFile);
                 videoGallery.appendChild(videoElement);
             }
         });
     </script>
-    
+
         </section>
 
         <style>
@@ -183,7 +173,6 @@
     transform: scale(1.05); 
 }
 
-            
 #upload-video {
     background-color: #f9f9f9;
     padding: 40px;
@@ -251,8 +240,6 @@ button[type="submit"]:hover {
     background-color: #0056b3;
 }
 
-
-
 #video-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
@@ -274,7 +261,6 @@ button[type="submit"]:hover {
     border-radius: 10px;
 }
 
-
 @media (max-width: 768px) {
     #video-gallery {
         grid-template-columns: 1fr; 
@@ -289,14 +275,14 @@ button[type="submit"]:hover {
        <footer>
         <div class="footer-content">
             <a href="https://www.tbceducation.ge/"><img src="images/tbc.png" alt="TBC Logo" class="footer-logo" height="125"></a>
-            
+
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/profile.php?id=61556699115785&locale=ka_GE"><img src="images/imfacebook.png" alt="Facebook" height="125"></a></li>
                 <li><a href="https://www.instagram.com/s63674505?igsh=Zjl0d3AxbDF6aG8y&utm_source=ig_contact_invite"><img src="images/insta.png" alt="Instagram" height="125"></a></li>
                 <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><img src="images/linked.png" alt="LinkedIn" height="125"></a></li>
                 <li><a href="privacy.html"><img src="images/privacy.png"></a></li>
             </ul>
-            
+
         </div>
         <p data-lang="copyright">© 2024 ყველა უფლება დაცულია.</p>
     </footer>
