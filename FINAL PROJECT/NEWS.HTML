@@ -37,20 +37,6 @@
         </nav>
     </header>
 
-
-
-
-    
-
-
-
-
-
-
-   
-    
-
-
     <section class="section">
         <button onclick="toggleForm()" class="styled-button" data-lang="addnews">სიახლის დამატება</button>
         <h2 data-lang="news-header">სიახლეები</h2>
@@ -60,26 +46,23 @@
                 <label for="title" data-lang="addtitle">სათაური:</label><br>
                 <input type="text" id="title" name="title" required placeholder="ჩაწერეთ სათაური -  სავალდებულო" data-lang="requiredtitle"><br><br>
 
-        
                 <label for="date" data-lang="date">თარიღი:</label><br>
                 <input type="date" id="date" name="date" required><br><br>
-        
+
                 <label for="story" data-lang="story">ამბავი:</label><br>
                 <textarea id="story" name="story" required placeholder="ჩაწერეთ სიახლე - სავალდებულო"></textarea><br><br>
-        
+
                 <label for="image" data-lang="photo">ფოტომასალა (ნებაყოფლობითი):</label><br>
                 <input type="file" id="image" name="image"><br><br>
-        
+
                 <input type="submit" value="დამატება" class="submit-button" data-lang="addition">
             </form>
         </div>
-        
+
         <div class="news-display" id="newsDisplay"></div>
         <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">
             11.12.24
           </p>
-
-
 
 <style>
     .date-style{
@@ -88,7 +71,7 @@
         color: white;
         margin-bottom: 20px;
     }
-    /* ღილაკის სტილი */
+
     .styled-button {
         background-color: #4CAF50;
         color: white;
@@ -112,7 +95,6 @@
         outline: none;
     }
 
-    /* ფორმის სტილები */
     .news-form {
         display: none;
         margin-top: 30px;
@@ -171,12 +153,10 @@
         background-color: #45a049;
     }
 
-    /* თარიღის სტილი */
     .date-style {
         display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;
     }
 
-    /* სიახლის გამოჩენის სტილები */
     .news-display {
         margin-top: 30px;
     }
@@ -184,7 +164,7 @@
     .news-display h3 {
         font-size: 24px;
         color: #333;
-       
+
     }
 
     .news-display p {
@@ -202,37 +182,37 @@
 </style>
 
 <script>
-    let editMode = false; // ნიშანი იმისთვის, რედაქტირებას ეთანხმება
+    let editMode = false; 
 
     function toggleForm(newsItem = null) {
         const form = document.getElementById('newsForm');
         form.style.display = form.style.display === 'none' ? 'block' : 'none';
 
         if (newsItem) {
-            // რედაქტირების რეჟიმი
+
             editMode = true;
             document.getElementById('title').value = newsItem.title;
             document.getElementById('date').value = newsItem.date;
             document.getElementById('story').value = newsItem.story;
-            // აქ უნდა იყოს ფოტოს ფორმატირება თუ იქნება რედაქტირება (მაგ. Base64 string ფორმატში)
+
         } else {
             editMode = false;
         }
     }
-    
+
     document.getElementById('addNewsForm').addEventListener('submit', function(event) {
         event.preventDefault();
-    
+
         const title = document.getElementById('title').value;
         const date = document.getElementById('date').value;
         const story = document.getElementById('story').value;
         const image = document.getElementById('image').files[0];
-    
+
         let newsHTML = `<section class="section">`;
         newsHTML += `<p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">${date}</p>`;
         newsHTML += `<p><b>${title}</b></p>`;
         newsHTML += `<p>${story}</p>`;
-    
+
         if (image) {
             const reader = new FileReader();
             reader.onload = function() {
@@ -246,25 +226,19 @@
             document.getElementById('newsDisplay').innerHTML = newsHTML;
         }
 
-        // Clear the form
         document.getElementById('addNewsForm').reset();
-        toggleForm();  // Hide the form after submission
+        toggleForm();  
 
-        // Check if in edit mode
         if (editMode) {
-            // Update existing news item if needed
-            editMode = false;  // Exit edit mode after saving
+
+            editMode = false;  
         }
     });
 </script>
 
-
-
-
-
           <p data-lang="theatre">
             <b>ჭიათურის თეატრი 130 წლის გახდა</b>
-            
+
         </p>
         <img src="images/theatre.jpg">
         <p class="theatre" data-lang="theatrenews">დღეს ჭიათურის თეატრს 130 წელი შეუსრულდა.
@@ -278,16 +252,14 @@
             საიუბილეო თარიღთან დაკავშირებით, მივიღეთ გადაწყვეტილება, - 2025 წელი  ჭიათურაში თეატრის წლად  გამოცხადდეს  და  შესაბამისად აღინიშნოს სხვადასხვა ღონისძიებებით.</p>
     </section>
     <section class="section">
-        
+
         <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">
             22.11.24
           </p>
 
-    
-
         <p data-lang="news-text">
             <b>ჭიათურის საბაგირო "საშევარდნო-ზედა რგანი" გაიხსნა.</b>
-            
+
         </p>
         <img src="images/sashevardno.png">
         <p class="cable" data-lang="cable">🚠  ჭიათურაში,ზედა რგანის (ე.წ  „მშვიდობის“ ) მიმართულებით სამგზავრო საბაგიროს რეაბილიტაციის პროცესი დასრულდა.
@@ -303,7 +275,7 @@
         <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">
             12.10.24
           </p>
-          
+
         <p data-lang="chiaturoba2024">
             <b>ჭიათურაში სახალხო დღესასწაული “ჭიათურობა 2024” აღინიშნა.</b>
         </p>
@@ -327,7 +299,7 @@
         <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">
             12.10.24
           </p>
-          
+
         <p data-lang="chiaturoba2024">
             <b>რობოტების გამოფენა 2024.</b>
         </p>
@@ -342,59 +314,55 @@
                 </iframe>
             </div>
         </section>
-        
-        
 
     <footer>
         <div class="footer-content">
             <a href="https://www.tbceducation.ge/"><img src="images/tbc.png" alt="TBC Logo" class="footer-logo" height="125"></a>
-            
+
             <ul class="social-links">
                 <li><a href="https://www.facebook.com/profile.php?id=61556699115785&locale=ka_GE"><img src="images/imfacebook.png" alt="Facebook" height="125"></a></li>
                 <li><a href="https://www.instagram.com/s63674505?igsh=Zjl0d3AxbDF6aG8y&utm_source=ig_contact_invite"><img src="images/insta.png" alt="Instagram" height="125"></a></li>
                 <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><img src="images/linked.png" alt="LinkedIn" height="125"></a></li>
                 <li><a href="privacy.html"><img src="images/privacy.png"></a></li>
             </ul>
-            
+
         </div>
         <p data-lang="copyright">© 2024 ყველა უფლება დაცულია.</p>
     </footer>
-  
+
     <style>
         #video-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Automatically adjust the number of columns */
-    gap: 20px; /* Space between videos */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px; 
     padding: 20px;
 }
 
 .video-frame {
-    background-color: #f1f1f1; /* Light background color */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for a modern look */
-    overflow: hidden; /* Prevents video from overflowing */
+    background-color: #f1f1f1; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
 }
 
 .video-frame iframe {
     width: 100%;
-    height: 200px; /* Fixed height */
-    object-fit: cover; /* Ensures video maintains aspect ratio */
+    height: 200px; 
+    object-fit: cover; 
     border-radius: 10px;
 }
 
-/* Ensure responsiveness */
 @media (max-width: 768px) {
     #video-gallery {
-        grid-template-columns: 1fr; /* Stack videos in a single column on smaller screens */
+        grid-template-columns: 1fr; 
     }
 
     .video-frame iframe {
-        height: 180px; /* Slightly smaller on small screens */
+        height: 180px; 
     }
 }
 
     </style>
-    
-    
+
 </body>
 </html>
