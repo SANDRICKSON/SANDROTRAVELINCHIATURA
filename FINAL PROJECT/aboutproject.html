@@ -64,25 +64,40 @@
                 </div>
                 
                 <style>
-.author-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.author-details img {
-    width: 300px; /* სიგანე გაადიდეთ */
-    height: auto; /* სიმაღლე ავტომატურად თანმიმდევრობით */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.author-details img:hover {
-    transform: scale(1.1); /* უფრო დიდი გახდება ჰოვერის დროს */
-}
-             </style>
+                    .author-details {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 20px;
+                        flex-wrap: wrap; /* საშუალებას აძლევს სურათებს გადაინაცვლონ ახალ რიგში */
+                    }
+                
+                    .author-details img {
+                        width: 300px; /* სიგანე გაადიდეთ */
+                        height: auto; /* სიმაღლე ავტომატურად თანმიმდევრობით */
+                        border-radius: 10px;
+                        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        transition: transform 0.3s ease;
+                        margin-bottom: 20px; /* დასაშორებელი სივრცე სურათებს შორის */
+                    }
+                
+                    .author-details img:hover {
+                        transform: scale(1.1); /* უფრო დიდი გახდება ჰოვერის დროს */
+                    }
+                
+                    /* Media query for mobile screens */
+                    @media (max-width: 768px) {
+                        .author-details {
+                            flex-direction: column; /* სურათები დალაგდება ორჯერ რიგში */
+                            align-items: center; /* ცენტრში განლაგება */
+                        }
+                
+                        .author-details img {
+                            width: 80%; /* სურათების სიგანე ეკრანის 80%-მდე */
+                        }
+                    }
+                </style>
+                
                 
                 
                 
