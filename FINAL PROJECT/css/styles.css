@@ -5,7 +5,9 @@ body{
     line-height: 1.6;
 }
 
-
+ .turebi{
+    text-align: center;
+  }
 header {
     background: #2c3e50;
     color: #fff;
