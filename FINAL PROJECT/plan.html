@@ -37,7 +37,7 @@
 
     <div class="container">
         <h2>დაჯავშნეთ თქვენი ტური</h2>
-        <form>
+        <form id="bookingForm">
             <div class="mb-3">
                 <label for="fullName" class="form-label">სრული სახელი</label>
                 <input type="text" class="form-control" id="fullName" required aria-label="Full Name">
@@ -56,21 +56,52 @@
             </div>
             <div class="mb-3">
                 <label for="numPersons" class="form-label">პერსონების რაოდენობა</label>
-                <input type="number" class="form-control" id="numPersons" min="1" required aria-label="Number of Persons">
+                <input type="number" class="form-control" id="numPersons" min="1" required aria-label="Number of Persons" oninput="calculateTotal()">
             </div>
             <div class="mb-3">
                 <label for="tourPackage" class="form-label">ტურის პაკეტი</label>
-                <select class="form-select" id="tourPackage" required aria-label="Tour Package">
+                <select class="form-select" id="tourPackage" required aria-label="Tour Package" onchange="calculateTotal()">
                     <option value="" disabled selected>აირჩიეთ პაკეტი</option>
-                    <option value="1">ისტორიული ტური 30₾</option>
-                    <option value="2">ტური კაცხის სვეტზე 40₾</option>
-                    <option value="3">საბაგიროების ტური 20₾</option>
+                    <option value="1" data-price="30">ისტორიული ტური 30₾</option>
+                    <option value="2" data-price="40">ტური კაცხის სვეტზე 40₾</option>
+                    <option value="3" data-price="20">საბაგიროების ტური 20₾</option>
+                    <option value="4" data-price="60">2 დღიანი ტური ჭიათურის გარშემო 60₾ <b>(1 პერსონა)</b></option>
+                    <option value="5" data-price="30">საბაგიროების ტური 30₾</option>
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary w-100">დაჯავშნე</button>
+            <div class="mb-3">
+                <label for="totalPrice" class="form-label">სულ გადასახდელი</label>
+                <input type="text" class="form-control" id="totalPrice" readonly aria-label="Total Price" value="0₾">
+            </div>
+            <button type="submit" class="btn btn-primary w-100">დაჯავშნა</button>
         </form>
+
+        <!-- Confirmation message -->
+        <div id="confirmationMessage" class="mt-4" style="display:none;">
+            <h4>დაჯავშნა წარმატებით დასრულდა!</h4>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function calculateTotal() {
+            const numPersons = document.getElementById("numPersons").value;
+            const tourPackage = document.getElementById("tourPackage");
+            const selectedOption = tourPackage.options[tourPackage.selectedIndex];
+            const pricePerPerson = selectedOption ? parseFloat(selectedOption.getAttribute('data-price')) : 0;
+
+            const total = numPersons * pricePerPerson;
+            document.getElementById("totalPrice").value = total + "₾";
+        }
+
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission for demonstration
+            // Show confirmation message
+            document.getElementById('confirmationMessage').style.display = 'block'; 
+            setTimeout(function() {
+                document.getElementById('confirmationMessage').style.display = 'none'; // Hide after 3 seconds
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
