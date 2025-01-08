@@ -183,20 +183,28 @@
 
 <script>
     let editMode = false; 
+    let editIndex = null;
 
-    function toggleForm(newsItem = null) {
+    // Load news from local storage
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedNews = JSON.parse(localStorage.getItem('newsItems')) || [];
+        savedNews.forEach(displayNews);
+    });
+
+    function toggleForm(newsItem = null, index = null) {
         const form = document.getElementById('newsForm');
         form.style.display = form.style.display === 'none' ? 'block' : 'none';
 
         if (newsItem) {
-
             editMode = true;
+            editIndex = index;
             document.getElementById('title').value = newsItem.title;
             document.getElementById('date').value = newsItem.date;
             document.getElementById('story').value = newsItem.story;
-
         } else {
             editMode = false;
+            editIndex = null;
+            document.getElementById('addNewsForm').reset();
         }
     }
 
@@ -208,33 +216,71 @@
         const story = document.getElementById('story').value;
         const image = document.getElementById('image').files[0];
 
-        let newsHTML = `<section class="section">`;
-        newsHTML += `<p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">${date}</p>`;
-        newsHTML += `<p><b>${title}</b></p>`;
-        newsHTML += `<p>${story}</p>`;
+        const newsItem = { title, date, story, image: null };
 
         if (image) {
             const reader = new FileReader();
             reader.onload = function() {
-                newsHTML += `<img src="${reader.result}" alt="News Image" style="width: 100px; height: 100px;">`;
-                newsHTML += `</section>`;
-                document.getElementById('newsDisplay').innerHTML = newsHTML;
+                newsItem.image = reader.result;
+                saveAndDisplayNews(newsItem);
             };
             reader.readAsDataURL(image);
         } else {
-            newsHTML += `</section>`;
-            document.getElementById('newsDisplay').innerHTML = newsHTML;
+            saveAndDisplayNews(newsItem);
         }
 
         document.getElementById('addNewsForm').reset();
-        toggleForm();  
+        toggleForm();
+    });
+
+    function saveAndDisplayNews(newsItem) {
+        let newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
 
         if (editMode) {
-
-            editMode = false;  
+            newsItems[editIndex] = newsItem;
+            editMode = false;
+            editIndex = null;
+        } else {
+            newsItems.push(newsItem);
         }
-    });
+
+        localStorage.setItem('newsItems', JSON.stringify(newsItems));
+        renderNews();
+    }
+
+    function renderNews() {
+        const newsDisplay = document.getElementById('newsDisplay');
+        newsDisplay.innerHTML = '';
+        const newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
+        newsItems.forEach((newsItem, index) => displayNews(newsItem, index));
+    }
+
+    function displayNews(newsItem, index) {
+        const newsHTML = `
+            <section class="section">
+                <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">${newsItem.date}</p>
+                <p><b>${newsItem.title}</b></p>
+                <p>${newsItem.story}</p>
+                ${newsItem.image ? `<img src="${newsItem.image}" alt="News Image" style="width: 100px; height: 100px;">` : ''}
+                <button onclick="editNews(${index})">✏️</button>
+                <button onclick="deleteNews(${index})">🗑️</button>
+            </section>`;
+        document.getElementById('newsDisplay').innerHTML += newsHTML;
+    }
+
+    function editNews(index) {
+        const newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
+        toggleForm(newsItems[index], index);
+    }
+
+    function deleteNews(index) {
+        let newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
+        newsItems.splice(index, 1);
+        localStorage.setItem('newsItems', JSON.stringify(newsItems));
+        renderNews();
+    }
 </script>
+
 
           <p data-lang="theatre">
             <b>ჭიათურის თეატრი 130 წლის გახდა</b>
