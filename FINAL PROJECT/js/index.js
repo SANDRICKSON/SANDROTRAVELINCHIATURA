@@ -1,6 +1,11 @@
 const translations = {
     en: {
+        "chiatura":"Tour Around the Chiatura",
+        "sightseeing":"See all the sights of Chiatura (2-day tour)",
+        "dajavshne":"Book Here",
         "copyright":"© 2024 All Rigths Reserved",
+        "packet":"Extended tours and vacation packages.",
+        "katskhi":"Tour on Katskhi Pillar",
         "title":"Main - Chiatura",
         "subscription":"Subscribe the news",
         "write":"Input here your mail and get news systematically",
@@ -23,15 +28,26 @@ const translations = {
         "timetable": "Timetable",
         "news": "News",
         "project": "About the Project",
+        "mgvimevi":"Tour around Mgvimevi Monastery",
         "videos": "Videos",
         "contact": "Contact",
         "books": "Books",
+        "mghvimevi":"Enjoy the beautiful nature of the village of Mgvimevi.",
         "log-in": "Log In",
         "register": "Register",
+        "turebi":"Tours in Chiatura",
         "culture-header": "Culture",
         "culture-text": "The city has cultural institutions such as the Akaki Tsereteli Drama Theatre, a cinema-theatre, the Palace of Rituals, the House of the Artist, the Chiatura Regional Museum, and the Cultural Palace. The cultural education of students in Chiatura is supported by the 'Actors' School' at the Culture Center, the State Ensemble of Dance and Song 'Changi,' folk dance ensembles: 'Merchkhali,' 'Pesevi,' and 'Ensemble-XXI,' the Georgian Folk Song Ensemble 'Imereti,' the School of Pop Music 'Natvrishvalli,' and the Ballroom Dance Studios 'Dance Forum,' 'Gracia,' and 'Elegance.' Every year on September 29, the population celebrates the traditional folk festival 'Chiaturoba,' dedicated to the city of Chiatura."
     },
     ka: {
+        "mgvimevi":"ტური მღვიმევის მონასტრის გარშემო",
+        "sightseeing":"ჭიათურის ყველა ღირსშესანიშნაობის ნახვა (2 დღიანი ტური)",
+        "chiatura":"ტური ჭიათურის გარშემო",
+        "mghimevi":"დატკბით სოფელ მღვიმევის ულამაზესი ბუნებით.",
+        "dajavshne":"დაჯავშნე აქ",
+        "packet":"გაფართოებული ტურები და დასვენების პაკეტი.",
+        "turebi":"ტურები ჭიათურაში",
+        "katskhi":"ტური კაცხის სვეტზე",
         "copyright":"© 2024 ყველა უფლება დაცულია",
         "title":"მთავარი",
         "subscription":"გამოიწერეთ სიახლეები",
@@ -87,3 +103,5 @@ function showPopup(text) {
 function hidePopup() {
     document.getElementById("popup").style.display = "none";
 }
+
+
