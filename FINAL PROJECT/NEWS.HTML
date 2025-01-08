@@ -357,23 +357,17 @@ function deleteNews(index) {
         <p data-lang="chiaturoba2024">
             <b>რობოტების გამოფენა 2024.</b>
         </p>
-        <section id="video-gallery">
+<section id="video-gallery">
             <div class="video-frame">
-                <video id="gallery-video" width="640" height="360" controls>
-                    <source src="images/exhibition.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <button id="play-button"></button>
+                <iframe  
+                    src="images/exhibition.mp4" 
+                    title="Video Gallery" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
+                    allowfullscreen>
+                </iframe>
             </div>
         </section>
-        
-        <script>
-            document.getElementById("play-button").addEventListener("click", function () {
-                const video = document.getElementById("gallery-video");
-                video.play();
-                this.style.display = "none"; // დამალე ღილაკი ვიდეოს გაშვების შემდეგ
-            });
-        </script>
         
 
     <footer>
