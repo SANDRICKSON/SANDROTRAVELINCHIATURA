@@ -23,8 +23,8 @@
                 <li><a href="NEWS.HTML" data-lang="news">სიახლეები</a></li>
                 <li><a href="aboutproject.html" data-lang="project" class="active">პროექტის შესახებ</a></li>
                 <li><a href="blogs.html" data-lang="videos">ვიდეოები</a></li>
-                <li><a href="contact.html" data-lang="contact">კონტაქტი</a></li>
                 <li><a href="books.html" data-lang="books">წიგნები</a></li>
+                <li><a href="contact.html" data-lang="contact">კონტაქტი</a></li>
                 <li><a href="AUTH/login.html" data-lang="log-in"><b>Log In</b></a></li>
                 <li><a href="AUTH/register.html" data-lang="register"><b>Register</b></a></li>
             </ul>
@@ -36,49 +36,49 @@
     </header>
 
     <div class="container">
-        <h2>დაჯავშნეთ თქვენი ტური</h2>
+        <h2 data-lang="dajavshne">დაჯავშნეთ თქვენი ტური</h2>
         <form id="bookingForm">
             <div class="mb-3">
-                <label for="fullName" class="form-label">სრული სახელი</label>
+                <label for="fullName" class="form-label" data-lang="saxeli">სრული სახელი</label>
                 <input type="text" class="form-control" id="fullName" required aria-label="Full Name">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">ელ. ფოსტა</label>
+                <label for="email" class="form-label" data-lang="fosta">ელ. ფოსტა</label>
                 <input type="email" class="form-control" id="email" required aria-label="Email">
             </div>
             <div class="mb-3">
-                <label for="phone" class="form-label">ტელეფონი</label>
+                <label for="phone" class="form-label" data-lang="phone">ტელეფონი</label>
                 <input type="tel" class="form-control" id="phone" required aria-label="Phone Number">
             </div>
             <div class="mb-3">
-                <label for="tourDate" class="form-label">ტურის თარიღი</label>
+                <label for="tourDate" class="form-label" data-lang="tourdate">ტურის თარიღი</label>
                 <input type="date" class="form-control" id="tourDate" required aria-label="Tour Date">
             </div>
             <div class="mb-3">
-                <label for="numPersons" class="form-label">პერსონების რაოდენობა</label>
+                <label for="numPersons" class="form-label" data-lang="personum">პერსონების რაოდენობა</label>
                 <input type="number" class="form-control" id="numPersons" min="1" required aria-label="Number of Persons" oninput="calculateTotal()">
             </div>
             <div class="mb-3">
-                <label for="tourPackage" class="form-label">ტურის პაკეტი</label>
+                <label for="tourPackage" class="form-label" data-lang="tourpacket">ტურის პაკეტი</label>
                 <select class="form-select" id="tourPackage" required aria-label="Tour Package" onchange="calculateTotal()">
-                    <option value="" disabled selected>აირჩიეთ პაკეტი</option>
-                    <option value="1" data-price="30">ისტორიული ტური 30₾</option>
-                    <option value="2" data-price="40">ტური კაცხის სვეტზე 40₾</option>
-                    <option value="3" data-price="20">საბაგიროების ტური 20₾</option>
-                    <option value="4" data-price="60">2 დღიანი ტური ჭიათურის გარშემო 60₾ <b>(1 პერსონა)</b></option>
-                    <option value="5" data-price="30">საბაგიროების ტური 30₾</option>
+                    <option value="" disabled selected data-lang="choose">აირჩიეთ პაკეტი</option>
+                    <option value="1" data-price="30" data-lang="istoriuli">ისტორიული ტური 30₾</option>
+                    <option value="2" data-price="40" data-lang="kacxi">ტური კაცხის სვეტზე 40₾</option>
+                    <option value="3" data-price="20" data-lang="cabletour">საბაგიროების ტური 30₾</option>
+                    <option value="4" data-price="60" data-lang="dgiuri">2 დღიანი ტური ჭიათურის გარშემო 60₾ <b>(1 პერსონა)</b></option>
+                    
                 </select>
             </div>
             <div class="mb-3">
-                <label for="totalPrice" class="form-label">სულ გადასახდელი</label>
+                <label for="totalPrice" class="form-label" data-lang="gadasaxdeli">სულ გადასახდელი</label>
                 <input type="text" class="form-control" id="totalPrice" readonly aria-label="Total Price" value="0₾">
             </div>
-            <button type="submit" class="btn btn-primary w-100">დაჯავშნა</button>
+            <button type="submit" class="btn btn-primary w-100" data-lang="dajavshna">დაჯავშნა</button>
         </form>
 
         <!-- Confirmation message -->
         <div id="confirmationMessage" class="mt-4" style="display:none;">
-            <h4>დაჯავშნა წარმატებით დასრულდა!</h4>
+            <h4 data-lang="warmatebit">დაჯავშნა წარმატებით დასრულდა!</h4>
         </div>
     </div>
 
@@ -104,4 +104,18 @@
         });
     </script>
 </body>
+<footer>
+    <div class="footer-content">
+        <a href="https://www.tbceducation.ge/"><img src="images/tbc.png" alt="TBC Logo" class="footer-logo" height="125"></a>
+        
+        <ul class="social-links">
+            <li><a href="https://www.facebook.com/profile.php?id=61556699115785&locale=ka_GE"><img src="images/imfacebook.png" alt="Facebook" height="125"></a></li>
+            <li><a href="https://www.instagram.com/s63674505?igsh=Zjl0d3AxbDF6aG8y&utm_source=ig_contact_invite"><img src="images/insta.png" alt="Instagram" height="125"></a></li>
+            <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><img src="images/linked.png" alt="LinkedIn" height="125"></a></li>
+            <li><a href="privacy.html"><img src="images/privacy.png"></a></li>
+        </ul>
+        
+    </div>
+    <p data-lang="copyright" class="rights">© 2024 ყველა უფლება დაცულია</p>
+</footer>
 </html>
