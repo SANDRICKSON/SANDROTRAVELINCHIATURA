@@ -185,7 +185,6 @@
     let editMode = false;
 let editIndex = null;
 
-// Load news from local storage
 document.addEventListener('DOMContentLoaded', function() {
     const savedNews = JSON.parse(localStorage.getItem('newsItems')) || [];
     savedNews.forEach(displayNews);
@@ -216,8 +215,7 @@ document.getElementById('addNewsForm').addEventListener('submit', function(event
     const story = document.getElementById('story').value;
     const image = document.getElementById('image').files[0];
 
-    // Validate that the date is not in the future
-    const today = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
+    const today = new Date().toISOString().split('T')[0]; 
     if (date > today) {
         alert("The date cannot be in the future.");
         return;
@@ -289,7 +287,6 @@ function deleteNews(index) {
 
 </script>
 
-
           <p data-lang="theatre">
             <b>ჭიათურის თეატრი 130 წლის გახდა</b>
 
@@ -357,7 +354,7 @@ function deleteNews(index) {
         <p data-lang="chiaturoba2024">
             <b>რობოტების გამოფენა 2024.</b>
         </p>
-<section id="video-gallery">
+        <section id="video-gallery">
             <div class="video-frame">
                 <iframe  
                     src="images/exhibition.mp4" 
@@ -368,7 +365,6 @@ function deleteNews(index) {
                 </iframe>
             </div>
         </section>
-        
 
     <footer>
         <div class="footer-content">
