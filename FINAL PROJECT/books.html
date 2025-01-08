@@ -13,7 +13,7 @@
 
     <title>წიგნები</title>
     <script src="js/books.js"></script>
-     <header>
+    <header>
         <nav class="navbar">
             <ul class="nav-menu">
                 <img src="images/SANDRINIO.png" alt="Logo" class="logo" height="100"></a></li>
@@ -39,80 +39,143 @@
     </header>
 
     <style>
+        .rights {
+    color: grey;
+    font-weight: bold;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+        /* სტილები კონტეინერისთვის */
         .header-books {
             text-align: center;
-            margin-top: 20px;
+            margin: 20px auto;
+            padding: 10px;
+            max-width: 900px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
         }
-
+    
+        /* სურათების სტილიზაცია */
         .header-books img {
+            display: block;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
-            width: 80%;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            width: 100%;
             max-width: 500px;
             margin: 20px auto;
         }
-
+    
         .header-books img:hover {
-            transform: scale(1.05);
+            transform: scale(1.1);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
         }
-
-        .header-books p, .header-books P {
+    
+        /* ტექსტისთვის საერთო სტილები */
+        .header-books p {
+            font-family: "Arial", sans-serif;
             font-size: 1.2em;
-            line-height: 1.6;
-            color: #333;
-            text-align: justify; 
-            margin: 15px 0;
-            padding: 0 20px;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+            margin: 15px 20px;
+            padding: 15px;
+            background-color: #f7f7f7;
+            border-left: 5px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
-
+    
+        .header-books p:hover {
+            background-color: #ecf0f1;
+            transform: translateX(10px);
+        }
+    
+        /* Bold ტექსტი */
         .header-books b {
-            font-weight: bold;
-            color: #2c3e50; 
+            font-weight: 600;
+            color: #2c3e50;
         }
-
+    
+        /* ტექსტის პირველი აბზაცი */
         .header-books p:first-child {
             font-size: 1.3em;
+            color: #2d3436;
+        }
+    
+        /* ლინკების სტილიზაცია */
+        .header-books a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 1.1em;
+            color: #3498db;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        }
+    
+        .header-books a:hover {
+            background-color: #3498db;
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+    
+        /* "poem" სექციის დიზაინი */
+        .poem {
+            font-family: "BPG Nuskha Modern", sans-serif;
+            margin: 30px auto;
+            padding: 20px;
+            max-width: 600px;
+            background: linear-gradient(to bottom, #f9f9f9, #e8e8e8);
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+        }
+    
+        .poem-title {
+            font-size: 1.6em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 15px;
+            color: #34495e;
+        }
+    
+        .poem p {
+            text-align: center;
+            line-height: 2;
             color: #555;
         }
-
-        .header-books p, .header-books P {
-            background-color: #f9f9f9;
-            border-left: 4px solid #3498db;
-            padding-left: 20px;
-            margin-top: 10px;
-            border-radius: 5px;
-        }
-
-       
-        .header-books p:hover, .header-books P:hover {
-            background-color: #ecf0f1;
-        }
-
-        .poem{
+    
+        /* ავტორის სტილები */
+        .author {
+            text-align: center;
             font-family: "BPG Nuskha Modern", sans-serif;
-        }
-
-        .author{
-            
-            font-family: "BPG Nuskha Modern", sans-serif;
-        
+            margin-top: 20px;
+            color: #636e72;
+            font-size: 1em;
+            font-style: italic;
+            padding-bottom: 10px;
         }
     </style>
+    
+    
 </head>
 <body>
     <div class="header-books">
         <img src="images/chiaturabook.jpg" alt="Chiatura Book">
         <img src="images/turashvili.jpg"   alt="Chiatura Book">
         <p data-lang="turashvili">ლეგენდარული ქართველი მწერლის <b>დათო ტურაშვილის</b> წიგნი ქალაქ ჭიათურაზე</p>
-        <p data-lang="buy">შესაძენად დააკლიკეთ აქ:</p><p><a href="https://saba.com.ge/books/details/14192"><i class="fas fa-shopping-cart" style="font-size: 36px; color: #4CAF50; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></i></a></p>
+        <p data-lang="buy">შესაძენად დააკლიკეთ აქ:</p><p><a href="https://saba.com.ge/books/details/14192" target="_blank"><i class="fas fa-shopping-cart" style="font-size: 36px; color: #4CAF50; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.2)'" onmouseout="this.style.transform='scale(1)'"></i></a></p>
 
         <img src="images/galaktioni.jpg" alt="Galaktioni">
         <p data-lang="galaqtioni">პოეტთა მეფის <b>გალაკტიონის</b> ლექსი შავ ოქროს ქალაქზე. საინტერესოა ის ფაქტი რომ გალაკტიონის მეუღლე ქალბატონი ოლია ოკუჯავა სწორედ ქალაქ ჭიათურაში განამწესეს პედაგოგად. ასე რომ რკინიგზის სადგურზე აუცილებლად ნახავთ დიდი გალაკტიონის ნაფეხურებს</p>
         <img src="images/blackgold.png" alt="shavioqrosqalaqi">
         <P data-lang="blackgold">ჭიათურის ასი წლისთავთან დაკავშირებით გამოცემული წიგნი, რომელიც ასახავს ჭიათურის განვითარებს ისტორიას, მრეწველობასა და კულტურას.</P>
         <p data-lang="article"><b>საინტერესო სტატია:</b> ვაჟა-ფშაველა ჭიათურაში</p>
-        <a href="https://kutaisi.travel/10648/vaja-wiaturashi/"><img src="images/vaja.jpg"></a>
+        <a href="https://kutaisi.travel/10648/vaja-wiaturashi/" target="_blank"><img src="images/vaja.jpg"></a>
         <P data-lang="warning"></P>
     </div>
 
@@ -147,7 +210,7 @@
             </ul>
             
         </div>
-        <p data-lang="copyright">© 2024 ყველა უფლება დაცულია.</p>
+        <p data-lang="copyright" class="rights">© 2024 ყველა უფლება დაცულია</p>
     </footer>
 
 </body>
