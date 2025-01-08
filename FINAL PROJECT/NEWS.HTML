@@ -359,15 +359,22 @@ function deleteNews(index) {
         </p>
         <section id="video-gallery">
             <div class="video-frame">
-                <iframe  
-                    src="images/exhibition.mp4" 
-                    title="Video Gallery" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" 
-                    allowfullscreen>
-                </iframe>
+                <video id="gallery-video" width="640" height="360" controls>
+                    <source src="images/exhibition.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <button id="play-button"></button>
             </div>
         </section>
+        
+        <script>
+            document.getElementById("play-button").addEventListener("click", function () {
+                const video = document.getElementById("gallery-video");
+                video.play();
+                this.style.display = "none"; // დამალე ღილაკი ვიდეოს გაშვების შემდეგ
+            });
+        </script>
+        
 
     <footer>
         <div class="footer-content">
