@@ -182,103 +182,111 @@
 </style>
 
 <script>
-    let editMode = false; 
-    let editIndex = null;
+    let editMode = false;
+let editIndex = null;
 
-    // Load news from local storage
-    document.addEventListener('DOMContentLoaded', function() {
-        const savedNews = JSON.parse(localStorage.getItem('newsItems')) || [];
-        savedNews.forEach(displayNews);
-    });
+// Load news from local storage
+document.addEventListener('DOMContentLoaded', function() {
+    const savedNews = JSON.parse(localStorage.getItem('newsItems')) || [];
+    savedNews.forEach(displayNews);
+});
 
-    function toggleForm(newsItem = null, index = null) {
-        const form = document.getElementById('newsForm');
-        form.style.display = form.style.display === 'none' ? 'block' : 'none';
+function toggleForm(newsItem = null, index = null) {
+    const form = document.getElementById('newsForm');
+    form.style.display = form.style.display === 'none' ? 'block' : 'none';
 
-        if (newsItem) {
-            editMode = true;
-            editIndex = index;
-            document.getElementById('title').value = newsItem.title;
-            document.getElementById('date').value = newsItem.date;
-            document.getElementById('story').value = newsItem.story;
-        } else {
-            editMode = false;
-            editIndex = null;
-            document.getElementById('addNewsForm').reset();
-        }
-    }
-
-    document.getElementById('addNewsForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const title = document.getElementById('title').value;
-        const date = document.getElementById('date').value;
-        const story = document.getElementById('story').value;
-        const image = document.getElementById('image').files[0];
-
-        const newsItem = { title, date, story, image: null };
-
-        if (image) {
-            const reader = new FileReader();
-            reader.onload = function() {
-                newsItem.image = reader.result;
-                saveAndDisplayNews(newsItem);
-            };
-            reader.readAsDataURL(image);
-        } else {
-            saveAndDisplayNews(newsItem);
-        }
-
+    if (newsItem) {
+        editMode = true;
+        editIndex = index;
+        document.getElementById('title').value = newsItem.title;
+        document.getElementById('date').value = newsItem.date;
+        document.getElementById('story').value = newsItem.story;
+    } else {
+        editMode = false;
+        editIndex = null;
         document.getElementById('addNewsForm').reset();
-        toggleForm();
-    });
+    }
+}
 
-    function saveAndDisplayNews(newsItem) {
-        let newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
+document.getElementById('addNewsForm').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-        if (editMode) {
-            newsItems[editIndex] = newsItem;
-            editMode = false;
-            editIndex = null;
-        } else {
-            newsItems.push(newsItem);
-        }
+    const title = document.getElementById('title').value;
+    const date = document.getElementById('date').value;
+    const story = document.getElementById('story').value;
+    const image = document.getElementById('image').files[0];
 
-        localStorage.setItem('newsItems', JSON.stringify(newsItems));
-        renderNews();
+    // Validate that the date is not in the future
+    const today = new Date().toISOString().split('T')[0]; // Get current date in YYYY-MM-DD format
+    if (date > today) {
+        alert("The date cannot be in the future.");
+        return;
     }
 
-    function renderNews() {
-        const newsDisplay = document.getElementById('newsDisplay');
-        newsDisplay.innerHTML = '';
-        const newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
-        newsItems.forEach((newsItem, index) => displayNews(newsItem, index));
+    const newsItem = { title, date, story, image: null };
+
+    if (image) {
+        const reader = new FileReader();
+        reader.onload = function() {
+            newsItem.image = reader.result;
+            saveAndDisplayNews(newsItem);
+        };
+        reader.readAsDataURL(image);
+    } else {
+        saveAndDisplayNews(newsItem);
     }
 
-    function displayNews(newsItem, index) {
-        const newsHTML = `
-            <section class="section">
-                <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px;  font-weight: bold; color: white;">${newsItem.date}</p>
-                <p><b>${newsItem.title}</b></p>
-                <p>${newsItem.story}</p>
-                ${newsItem.image ? `<img src="${newsItem.image}" alt="News Image" style="width: 100px; height: 100px;">` : ''}
-                <button onclick="editNews(${index})">✏️</button>
-                <button onclick="deleteNews(${index})">🗑️</button>
-            </section>`;
-        document.getElementById('newsDisplay').innerHTML += newsHTML;
+    document.getElementById('addNewsForm').reset();
+    toggleForm();
+});
+
+function saveAndDisplayNews(newsItem) {
+    let newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
+
+    if (editMode) {
+        newsItems[editIndex] = newsItem;
+        editMode = false;
+        editIndex = null;
+    } else {
+        newsItems.push(newsItem);
     }
 
-    function editNews(index) {
-        const newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
-        toggleForm(newsItems[index], index);
-    }
+    localStorage.setItem('newsItems', JSON.stringify(newsItems));
+    renderNews();
+}
 
-    function deleteNews(index) {
-        let newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
-        newsItems.splice(index, 1);
-        localStorage.setItem('newsItems', JSON.stringify(newsItems));
-        renderNews();
-    }
+function renderNews() {
+    const newsDisplay = document.getElementById('newsDisplay');
+    newsDisplay.innerHTML = '';
+    const newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
+    newsItems.forEach((newsItem, index) => displayNews(newsItem, index));
+}
+
+function displayNews(newsItem, index) {
+    const newsHTML = `
+        <section class="section">
+            <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px;  font-weight: bold; color: white;">${newsItem.date}</p>
+            <p><b>${newsItem.title}</b></p>
+            <p>${newsItem.story}</p>
+            ${newsItem.image ? `<img src="${newsItem.image}" alt="News Image" style="width: 100px; height:100px ">` : ''}
+            <button onclick="editNews(${index})">✏️</button>
+            <button onclick="deleteNews(${index})">🗑️</button>
+        </section>`;
+    document.getElementById('newsDisplay').innerHTML += newsHTML;
+}
+
+function editNews(index) {
+    const newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
+    toggleForm(newsItems[index], index);
+}
+
+function deleteNews(index) {
+    let newsItems = JSON.parse(localStorage.getItem('newsItems')) || [];
+    newsItems.splice(index, 1);
+    localStorage.setItem('newsItems', JSON.stringify(newsItems));
+    renderNews();
+}
+
 </script>
 
 
