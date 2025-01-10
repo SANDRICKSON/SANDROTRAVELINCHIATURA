@@ -42,23 +42,39 @@
         <button onclick="toggleForm()" class="styled-button" data-lang="addnews"><i class="fas fa-pencil-alt"></i> სიახლის დამატება</button>
         <h2 data-lang="news-header">სიახლეები</h2>
         <div class="news-form" id="newsForm">
-            <h3 data-lang="addhere">ახალი ამბის დამატება</h3>
+            <h3 data-lang="addhere">
+                <i class="fas fa-plus-circle"></i> <!-- დამატების იკონა -->
+                ახალი ამბის დამატება
+            </h3>
             <form id="addNewsForm">
-                <label for="title" data-lang="addtitle">სათაური:</label><br>
+                <label for="title" data-lang="addtitle">
+                    <i class="fas fa-heading"></i> <!-- სათაურის იკონა -->
+                    სათაური:
+                </label><br>
                 <input type="text" id="title" name="title" required placeholder="ჩაწერეთ სათაური -  სავალდებულო" data-lang="requiredtitle"><br><br>
-
-                <label for="date" data-lang="date">თარიღი:</label><br>
+        
+                <label for="date" data-lang="date">
+                    <i class="fas fa-calendar-alt"></i> <!-- თარიღის იკონა -->
+                    თარიღი:
+                </label><br>
                 <input type="date" id="date" name="date" required><br><br>
-
-                <label for="story" data-lang="story">ამბავი:</label><br>
+        
+                <label for="story" data-lang="story">
+                    <i class="fas fa-file-alt"></i> <!-- ამბის იკონა -->
+                    ამბავი:
+                </label><br>
                 <textarea id="story" name="story" required placeholder="ჩაწერეთ სიახლე - სავალდებულო"></textarea><br><br>
-
-                <label for="image" data-lang="photo">ფოტომასალა (ნებაყოფლობითი):</label><br>
+        
+                <label for="image" data-lang="photo">
+                    <i class="fas fa-image"></i> <!-- ფოტოს იკონა -->
+                    ფოტომასალა (ნებაყოფლობითი):
+                </label><br>
                 <input type="file" id="image" name="image"><br><br>
-
+        
                 <input type="submit" value="დამატება" class="submit-button" data-lang="addition">
             </form>
         </div>
+        
 
         <div class="news-display" id="newsDisplay"></div>
         <p style="display: inline-block; padding: 10px; background-color: green; border-radius: 5px; font-size: 18px; font-weight: bold; color: white;">
