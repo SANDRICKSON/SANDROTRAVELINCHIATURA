@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="images/SANDRINIO.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
     <script src="js/books.js"></script>
 </head>
 <body>
@@ -14,19 +15,19 @@
         <nav class="navbar">
             <ul class="nav-menu">
                 <img src="images/SANDRINIO.png" alt="Logo" class="logo" height="100"></a></li>
-                <li><a href="index.html" data-lang="main">მთავარი</a></li>
-                <li><a href="history.html" data-lang="history">ისტორია</a></li>
-                <li><a href="culture.html" data-lang="culture">კულტურა</a></li>
-                <li><a href="tourism.html" data-lang="tourism">ტურიზმი</a></li>
-                <li><a href="gallery.html" data-lang="gallery">გალერეა</a></li>
-                <li><a href="TIMETABLES.HTML" data-lang="timetable">განრიგი</a></li>
-                <li><a href="NEWS.HTML" data-lang="news">სიახლეები</a></li>
-                <li><a href="aboutproject.html" data-lang="project" class="active">პროექტის შესახებ</a></li>
-                <li><a href="blogs.html" data-lang="videos">ვიდეოები</a></li>
-                <li><a href="books.html" data-lang="books">წიგნები</a></li>
-                <li><a href="contact.html" data-lang="contact">კონტაქტი</a></li>
-                <li><a href="AUTH/login.html" data-lang="log-in"><b>Log In</b></a></li>
-                <li><a href="AUTH/register.html" data-lang="register"><b>Register</b></a></li>
+                <li><a href="index.html" data-lang="main"><i class="fas fa-home"></i> მთავარი</a></li>
+                <li><a href="history.html" data-lang="history"><i class="fas fa-book"></i> ისტორია</a></li>
+                <li><a href="culture.html" data-lang="culture"><i class="fas fa-theater-masks"></i> კულტურა</a></li>
+                <li><a href="tourism.html" data-lang="tourism"><i class="fas fa-globe"></i> ტურიზმი</a></li>
+                <li><a href="gallery.html" data-lang="gallery"><i class="fas fa-images"></i> გალერეა</a></li>
+                <li><a href="TIMETABLES.HTML" data-lang="timetable"><i class="fas fa-calendar-alt"></i> განრიგი</a></li>
+                <li><a href="NEWS.HTML" data-lang="news"><i class="fas fa-newspaper"></i> სიახლეები</a></li>
+                <li><a href="aboutproject.html" data-lang="project" class="active"><i class="fas fa-info-circle"></i> პროექტის შესახებ</a></li>
+                <li><a href="blogs.html" data-lang="videos"><i class="fas fa-video"></i> ვიდეოები</a></li>
+                <li><a href="books.html" data-lang="books"><i class="fas fa-book-open"></i> წიგნები</a></li>
+                <li><a href="contact.html" data-lang="contact"><i class="fas fa-phone-alt"></i> კონტაქტი</a></li>
+                <li><a href="AUTH/login.html" data-lang="log-in"><i class="fas fa-sign-in-alt"></i> <b>Log In</b></a></li>
+                <li><a href="AUTH/register.html" data-lang="register"><i class="fas fa-user-plus"></i> <b>Register</b></a></li>
             </ul>
             <div class="language-buttons">
                 <button class="Georgian" onclick="changeLanguage('ka')">ქართული</button>
@@ -39,30 +40,30 @@
         <h2 data-lang="dajavshne">დაჯავშნეთ თქვენი ტური</h2>
         <form id="bookingForm">
             <div class="mb-3">
-                <label for="fullName" class="form-label" data-lang="saxeli">სრული სახელი</label>
+                <label for="fullName" class="form-label" data-lang="saxeli"><i class="fas fa-user"></i> სრული სახელი</label>
                 <input type="text" class="form-control" id="fullName" required aria-label="Full Name">
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label" data-lang="fosta">ელ. ფოსტა</label>
+                <label for="email" class="form-label" data-lang="fosta"><i class="fas fa-envelope"></i> ელ. ფოსტა</label>
                 <input type="email" class="form-control" id="email" required aria-label="Email">
             </div>
             <div class="mb-3">
-                <label for="phone" class="form-label" data-lang="phone">ტელეფონი</label>
+                <label for="phone" class="form-label" data-lang="phone"><i class="fas fa-phone-alt"></i> ტელეფონი</label>
                 <input type="tel" class="form-control" id="phone" required aria-label="Phone Number">
             </div>
             <div class="mb-3">
-                <label for="tourDate" class="form-label" data-lang="tourdate">ტურის თარიღი</label>
+                <label for="tourDate" class="form-label" data-lang="tourdate"><i class="fas fa-calendar-alt"></i> ტურის თარიღი</label>
                 <input type="date" class="form-control" id="tourDate" required aria-label="Tour Date">
             </div>
             <div class="mb-3">
-                <label for="numPersons" class="form-label" data-lang="personum">პერსონების რაოდენობა</label>
+                <label for="numPersons" class="form-label" data-lang="personum"><i class="fas fa-users"></i> პერსონების რაოდენობა</label>
                 <input type="number" class="form-control" id="numPersons" min="1" required aria-label="Number of Persons" oninput="calculateTotal()">
             </div>
             <div class="mb-3">
                 <label for="tourPackage" class="form-label" data-lang="tourpacket">ტურის პაკეტი</label>
                 <select class="form-select" id="tourPackage" required aria-label="Tour Package" onchange="calculateTotal()">
                     <option value="" disabled selected data-lang="choose">აირჩიეთ პაკეტი</option>
-                    <option value="1" data-price="30" data-lang="istoriuli">ისტორიული ტური 30₾</option>
+                    <option value="1" data-price="30" data-lang="istoriuli"><i class="fas fa-suitcase"></i> ისტორიული ტური 30₾</option>
                     <option value="2" data-price="40" data-lang="kacxi">ტური კაცხის სვეტზე 40₾</option>
                     <option value="3" data-price="20" data-lang="cabletour">საბაგიროების ტური 30₾</option>
                     <option value="4" data-price="60" data-lang="dgiuri">2 დღიანი ტური ჭიათურის გარშემო 60₾ <b>(1 პერსონა)</b></option>
@@ -78,7 +79,8 @@
 
         <!-- Confirmation message -->
         <div id="confirmationMessage" class="mt-4" style="display:none;">
-            <h4 data-lang="warmatebit">დაჯავშნა წარმატებით დასრულდა!</h4>
+            <h4 data-lang="warmatebit"><i class="fas fa-thumbs-up"></i> დაჯავშნა წარმატებით დასრულდა!</h4>
+
         </div>
     </div>
 
