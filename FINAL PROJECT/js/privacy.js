@@ -1,6 +1,7 @@
 const translations = {
     en:{
         "main": "Home",
+        "copyright":"© 2024 All Rigths Reserved",
         "history": "History",
         "culture": "Culture",
         "tourism": "Tourism",
@@ -36,6 +37,7 @@ const translations = {
     },
 
     ka:{
+        "copyright":"© 2024 ყველა უფლება დაცულია",
         "main": "მთავარი",
         "history": "ისტორია",
         "culture": "კულტურა",
@@ -47,8 +49,8 @@ const translations = {
         "videos": "ვიდეოები",
         "contact": "კონტაქტი",
         "books": "წიგნები",
-        "log-in": "შესვლა",
-        "register": "რეგისტრაცია",
+        "log-in": "Log In",
+        "register": "Register",
         "privacy":"პირადი მონაცემების პოლიტიკა",
         "care":"ჩვენ ვუფრთხილდებით თქვენს პირად მონაცემებს და ვმოქმედებთ თქვენი ინფორმაციის დაცვით. ეს პირადი მონაცემების პოლიტიკა ადგენს იმ პრინციპებს, რომელთა მიხედვითაც ჩვენ ვაკონტროლებთ, ვიძიებთ და ვმოქმედებთ თქვენს მიერ მოწოდებულ მონაცემებზე.",
         "datas":"1. შეგროვებული მონაცემები",
