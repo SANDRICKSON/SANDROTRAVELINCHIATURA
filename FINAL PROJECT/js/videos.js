@@ -1,6 +1,6 @@
 const translations = {
     en: {
-        "virto": "Virtual Tour In Chiatura",
+        "virto": "",
         "gallery1": "Gallery of videos",
         "main": "Home",
         "history": "History",
@@ -34,7 +34,7 @@ const translations = {
         "virtualuri":"ვირტუალური ტური",
         "copyright": "© 2024 ყველა უფლება დაცულია",
         "upload-video": "ვიდეოს ატვირთვა",
-        "virto": "ვირტუალური ტური ჭიათურაში",
+        "virto": "",
         "gallery1": "ვიდეოების გალერეა",
         "main": "მთავარი",
         "history": "ისტორია",
