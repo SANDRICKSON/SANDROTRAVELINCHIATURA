@@ -11,6 +11,7 @@ const translations = {
         "project": "About the Project",
         "videos": "Videos",
         "contact": "Contact",
+        "copyright":"© 2024 All Rigths Reserved",
         "books": "Books",
         "log-in": "Log In",
         "register": "Register",
@@ -19,6 +20,7 @@ const translations = {
         "holliday": "Since 1921, Chiatura has been celebrating its city holiday 'Chiaturoba', which is attended by famous Georgians and representatives of cities friendly with Chiatura.",
     },
     ka: {
+        "copyright":"© 2024 ყველა უფლება დაცულია",
         "culture-title": "ტურიზმი - ჭიათურა",
         "main": "მთავარი",
         "history": "ისტორია",
@@ -52,18 +54,14 @@ const translations = {
     }
 };
 function changeLanguage(lang) {
-    if (!translations[lang]) {
-        console.error(`Language "${lang}" not found.`);
-        return;
-    }
-
     document.querySelectorAll("[data-lang]").forEach(element => {
         const key = element.getAttribute("data-lang");
-        if (translations[lang][key] !== undefined) {
-            element.textContent = translations[lang][key];
+        // Only change text content for elements that have the class "menu-text"
+        const textElement = element.querySelector('.menu-text');
+        if (textElement) {
+            textElement.textContent = translations[lang][key];
         } else {
-            console.warn(`Key "${key}" not found in language "${lang}".`);
-            element.textContent = `[${key}]`; // Placeholder if translation is missing
+            element.textContent = translations[lang][key];
         }
     });
-};
+}
