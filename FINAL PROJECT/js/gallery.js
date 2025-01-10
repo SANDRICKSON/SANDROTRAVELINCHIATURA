@@ -33,7 +33,7 @@ const translations = {
         "contact": "კონტაქტი",
         "books": "წიგნები",
         "log-in": "Log In",
-        "register": "Registration",
+        "register": "Register",
         "gallery-title": "გალერეა",
         "gallery-text": "იხილეთ ქალაქის ულამაზესი ხედები და მნიშვნელოვანი ადგილები.",
         "upload-btn": "ატვირთვა",
