@@ -98,7 +98,7 @@ function changeLanguage(lang) {
 }
 
 // Example of how to use
-changeLanguage('en');
+
 
 
 
