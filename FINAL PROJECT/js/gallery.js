@@ -45,8 +45,15 @@ const translations = {
 function changeLanguage(lang) {
     document.querySelectorAll("[data-lang]").forEach(element => {
         const key = element.getAttribute("data-lang");
-        element.textContent = translations[lang][key];
+        // Only change text content for elements that have the class "menu-text"
+        const textElement = element.querySelector('.menu-text');
+        if (textElement) {
+            textElement.textContent = translations[lang][key];
+        } else {
+            element.textContent = translations[lang][key];
+        }
     });
+
     
     document.getElementById("uploadButton").textContent = translations[lang]["upload-btn"];
     document.getElementById("uploadButton").setAttribute("data-alert", translations[lang]["upload-alert"]);
