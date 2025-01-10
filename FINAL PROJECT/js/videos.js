@@ -1,8 +1,8 @@
 const translations = {
     en: {
-        "virto":"Virtual Tour In Chiatura",
-       "gallery1":"Gallery of videos",
-       "main": "Home",
+        "virto": "Virtual Tour In Chiatura",
+        "gallery1": "Gallery of videos",
+        "main": "Home",
         "history": "History",
         "culture": "Culture",
         "tourism": "Tourism",
@@ -12,21 +12,35 @@ const translations = {
         "project": "About the Project",
         "videos": "Videos",
         "contact": "Contact",
+        "copyright": "© 2024 All Rights Reserved",
         "books": "Books",
         "log-in": "Log In",
         "register": "Register",
         "culture-header": "Culture",
-        "upload-video":"Upload Video",
-        "culture-text": "The city has cultural institutions such as the Akaki Tsereteli Drama Theatre, a cinema-theatre, the Palace of Rituals, the House of the Artist, the Chiatura Regional Museum, and the Cultural Palace. The cultural education of students in Chiatura is supported by the 'Actors' School' at the Culture Center, the State Ensemble of Dance and Song 'Changi,' folk dance ensembles: 'Merchkhali,' 'Pesevi,' and 'Ensemble-XXI,' the Georgian Folk Song Ensemble 'Imereti,' the School of Pop Music 'Natvrishvalli,' and the Ballroom Dance Studios 'Dance Forum,' 'Gracia,' and 'Elegance.' Every year on September 29, the population celebrates the traditional folk festival 'Chiaturoba,' dedicated to the city of Chiatura."
+        "alsolike": "You may also like",
+        "upload-video": "Upload Video",
+        "culture-text": "The city has cultural institutions such as the Akaki Tsereteli Drama Theatre, a cinema-theatre, the Palace of Rituals, the House of the Artist, the Chiatura Regional Museum, and the Cultural Palace. The cultural education of students in Chiatura is supported by the 'Actors' School' at the Culture Center, the State Ensemble of Dance and Song 'Changi,' folk dance ensembles: 'Merchkhali,' 'Pesevi,' and 'Ensemble-XXI,' the Georgian Folk Song Ensemble 'Imereti,' the School of Pop Music 'Natvrishvalli,' and the Ballroom Dance Studios 'Dance Forum,' 'Gracia,' and 'Elegance.' Every year on September 29, the population celebrates the traditional folk festival 'Chiaturoba,' dedicated to the city of Chiatura.",
+        "film_title": "Chiatura",
+        "image1": "Film Poster",
+        "image2": "Chiatura Scenes",
+        "watch_button": "Watch the Film",
+        "virtualuri":"Virtual Tour",
+        "select-video":"Choose a Video:",
+        "upload-button":"Upload"
     },
     ka: {
-        "upload-video":"ვიდეოს ატვირთვა",
-        "virto":"ვირტუალური ტური ჭიათურაში",
-        "gallery1":"ვიდეოების გალერეა",
+        "select-video":"აირჩიეთ ვიდეო:",
+        "upload-button":"ატვირთვა",
+        "virtualuri":"ვირტუალური ტური",
+        "copyright": "© 2024 ყველა უფლება დაცულია",
+        "upload-video": "ვიდეოს ატვირთვა",
+        "virto": "ვირტუალური ტური ჭიათურაში",
+        "gallery1": "ვიდეოების გალერეა",
         "main": "მთავარი",
         "history": "ისტორია",
         "culture": "კულტურა",
         "tourism": "ტურიზმი",
+        "alsolike": "ასევე შეიძლება მოგეწონოთ",
         "gallery": "გალერეა",
         "timetable": "განრიგი",
         "news": "სიახლეები",
@@ -34,12 +48,17 @@ const translations = {
         "videos": "ვიდეოები",
         "contact": "კონტაქტი",
         "books": "წიგნები",
-        "log-in": "შესვლა",
-        "register": "რეგისტრაცია",
+        "log-in": "Log In",
+        "register": "Register",
         "culture-header": "კულტურა",
-        "culture-text": "ქალაქში არის კულტურის დაწესებულებები: აკაკი წერეთლის სახელობის ჭიათურის დრამატული თეატრი, კინო-თეატრი, რიტუალების სასახლე, მხატვრის სახლი, ჭიათურის მხარეთმცოდნეობის მუზეუმი და კულტურის სასახლე. ჭიათურაში მოსწავლეთა კულტურულ აღზრდას ემსახურება კულტურის ცენტრთან არსებული „მსახიობთა სკოლა“, ცეკვისა და სიმღერის სახელმწიფო ანსამბლი „ჩანგი“, ხალხური ცეკვის ანსამბლები: „მერცხალი“, „ფესვები“ და „ანსამბლი-XXI“, ქართული ხალხური სიმღერის ანსამბლი „იმერეთი“, საესტრადო სიმღერის შემსწავლელი სკოლა „ნატვრისთვალი“, სამეჯლისო-სპოტრული ცეკვების სტუდიები: „დანს-ფორუმი“, „გრაცია“ და „ელეგანტი“. ყოველწლიურად 29 სექტემბერს მოსახლეობა აღნიშნავს ტრადიციულ folk დღესასწაულს „ჭიათურობას“, რომელიც ეძღვნება ქალაქ ჭიათურის დღეს."
+        "culture-text": "ქალაქში არის კულტურის დაწესებულებები: აკაკი წერეთლის სახელობის ჭიათურის დრამატული თეატრი, კინო-თეატრი, რიტუალების სასახლე, მხატვრის სახლი, ჭიათურის მხარეთმცოდნეობის მუზეუმი და კულტურის სასახლე. ჭიათურაში მოსწავლეთა კულტურულ აღზრდას ემსახურება კულტურის ცენტრთან არსებული „მსახიობთა სკოლა“, ცეკვისა და სიმღერის სახელმწიფო ანსამბლი „ჩანგი“, folk ცეკვის ანსამბლები: „მერცხალი“, „ფესვები“ და „ანსამბლი-XXI“, ქართული folk სიმღერის ანსამბლი „იმერეთი“, საესტრადო სიმღერის შემსწავლელი სკოლა „ნატვრისთვალი“, სამეჯლისო-სპოტრული ცეკვების სტუდიები: „დანს-ფორუმი“, „გრაცია“ და „ელეგანტი“. ყოველწლიურად 29 სექტემბერს მოსახლეობა აღნიშნავს ტრადიციულ folk დღესასწაულს „ჭიათურობას“, რომელიც ეძღვნება ქალაქ ჭიათურის დღეს.",
+        "film_title": "ჭიათურა",
+        "image1": "ფილმის აფიშა",
+        "image2": "ჭიათურას კადრები",
+        "watch_button": "ფილმის ყურება"
     }
 };
+
 
 
 
