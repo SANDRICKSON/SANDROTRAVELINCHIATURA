@@ -83,16 +83,17 @@ const translations = {
 
 
 function changeLanguage(lang) {
-    const elements = document.querySelectorAll('[data-lang]');
-
-    elements.forEach(element => {
-        const key = element.getAttribute('data-lang');
-        if (translations[lang][key]) {
-            if (element.tagName === 'TITLE') {
-                document.title = translations[lang][key];
-            } else {
-                element.textContent = translations[lang][key];
-            }
+    document.querySelectorAll("[data-lang]").forEach(element => {
+        const key = element.getAttribute("data-lang");
+        // Only change text content for elements that have the class "menu-text"
+        const textElement = element.querySelector('.menu-text');
+        if (textElement) {
+            textElement.textContent = translations[lang][key];
+        } else {
+            element.textContent = translations[lang][key];
         }
     });
 }
+
+// Example of how to use
+changeLanguage('en');
