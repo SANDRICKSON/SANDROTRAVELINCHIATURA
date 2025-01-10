@@ -26,10 +26,15 @@ const translations = {
         "watch_button": "Watch the Film",
         "virtualuri":"Virtual Tour",
         "select-video":"Choose a Video:",
-        "upload-button":"Upload"
+        "upload-button":"Upload",
+        "wiatura":"Chiatura",
+        "mravali":"A film presented at many international festivals"
+
     },
     ka: {
+        "mravali":"მრავალ საერთაშორისო ფესტივალზე წარდგენილი ფილმი",
         "select-video":"აირჩიეთ ვიდეო:",
+        "wiatura":"ჭიათურა",
         "upload-button":"ატვირთვა",
         "virtualuri":"ვირტუალური ტური",
         "copyright": "© 2024 ყველა უფლება დაცულია",
