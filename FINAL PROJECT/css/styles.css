@@ -14,7 +14,7 @@ header {
     padding: 1rem 0;
   }
   .nav-menu li a:hover {
-    color: blue;
+    color:  rgba(0, 123, 255, 0.3);
 }
   nav ul {
     list-style: none;
