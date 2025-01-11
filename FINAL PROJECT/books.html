@@ -37,129 +37,218 @@
             </div>
         </nav>
     </header>
+    <input type="text" id="searchBar" placeholder="მოძებნე წიგნი..." onkeyup="searchBooks()">
 
+  
+    
+    <!-- ეს კონტეინერი იქნება გამოჩენილი შედეგებისთვის -->
+    <div id="searchResults"></div>
+    
     <style>
-        .rights {
-    color: grey;
-    font-weight: bold;
-    font-size: 18px;
-    letter-spacing: 1px;
+   .search-container {
+    text-align: center;
+    margin: 20px 0;
 }
-        /* სტილები კონტეინერისთვის */
-        .header-books {
-            text-align: center;
-            margin: 20px auto;
-            padding: 10px;
-            max-width: 900px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-        }
+
+#searchBar {
+    width: 60%;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    transition: all 0.3s ease;
+}
+
+#searchBar:focus {
+    border-color: #3498db;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+#searchResults {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* სურათების კონტეინერი */
+.search-results img {
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 80%;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.search-results img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#searchResults p {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    padding: 15px;
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    margin-top: 20px;
+}
     
-        /* სურათების სტილიზაცია */
-        .header-books img {
-            display: block;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-            transition: transform 0.4s ease, box-shadow 0.4s ease;
-            width: 100%;
-            max-width: 500px;
-            margin: 20px auto;
-        }
+    /* სტილები კონტეინერისთვის */
+    .header-books {
+        text-align: center;
+        margin: 20px auto;
+        padding: 10px;
+        max-width: 900px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
     
-        .header-books img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-        }
+    /* სურათების სტილიზაცია */
+    .header-books img {
+        display: block;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
     
-        /* ტექსტისთვის საერთო სტილები */
-        .header-books p {
-            font-family: "Arial", sans-serif;
-            font-size: 1.2em;
-            line-height: 1.8;
-            color: #444;
-            text-align: justify;
-            margin: 15px 20px;
-            padding: 15px;
-            background-color: #f7f7f7;
-            border-left: 5px solid #3498db;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+    .header-books img:hover {
+        transform: scale(1.1);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+    }
     
-        .header-books p:hover {
-            background-color: #ecf0f1;
-            transform: translateX(10px);
-        }
+    /* ტექსტისთვის საერთო სტილები */
+    .header-books p {
+        font-family: "Arial", sans-serif;
+        font-size: 1.2em;
+        line-height: 1.8;
+        color: #444;
+        text-align: justify;
+        margin: 15px 20px;
+        padding: 15px;
+        background-color: #f7f7f7;
+        border-left: 5px solid #3498db;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
     
-        /* Bold ტექსტი */
-        .header-books b {
-            font-weight: 600;
-            color: #2c3e50;
-        }
+    .header-books p:hover {
+        background-color: #ecf0f1;
+        transform: translateX(10px);
+    }
     
-        /* ტექსტის პირველი აბზაცი */
-        .header-books p:first-child {
-            font-size: 1.3em;
-            color: #2d3436;
-        }
+    /* Bold ტექსტი */
+    .header-books b {
+        font-weight: 600;
+        color: #2c3e50;
+    }
     
-        /* ლინკების სტილიზაცია */
-        .header-books a {
-            display: inline-block;
-            text-decoration: none;
-            font-size: 1.1em;
-            color: #3498db;
-            font-weight: bold;
-            padding: 10px 20px;
-            border: 2px solid #3498db;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
-        }
+    /* ტექსტის პირველი აბზაცი */
+    .header-books p:first-child {
+        font-size: 1.3em;
+        color: #2d3436;
+    }
     
-        .header-books a:hover {
-            background-color: #3498db;
-            color: #ffffff;
-            transform: scale(1.05);
-        }
+    /* ლინკების სტილიზაცია */
+    .header-books a {
+        display: inline-block;
+        text-decoration: none;
+        font-size: 1.1em;
+        color: #3498db;
+        font-weight: bold;
+        padding: 10px 20px;
+        border: 2px solid #3498db;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
     
-        /* "poem" სექციის დიზაინი */
-        .poem {
-            font-family: "BPG Nuskha Modern", sans-serif;
-            margin: 30px auto;
-            padding: 20px;
-            max-width: 600px;
-            background: linear-gradient(to bottom, #f9f9f9, #e8e8e8);
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-        }
+    .header-books a:hover {
+        background-color: #3498db;
+        color: #ffffff;
+        transform: scale(1.05);
+    }
     
-        .poem-title {
-            font-size: 1.6em;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 15px;
-            color: #34495e;
-        }
+    /* "poem" სექციის დიზაინი */
+    .poem {
+        font-family: "BPG Nuskha Modern", sans-serif;
+        margin: 30px auto;
+        padding: 20px;
+        max-width: 600px;
+        background: linear-gradient(to bottom, #f9f9f9, #e8e8e8);
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+    }
     
-        .poem p {
-            text-align: center;
-            line-height: 2;
-            color: #555;
-        }
+    .poem-title {
+        font-size: 1.6em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 15px;
+        color: #34495e;
+    }
     
-        /* ავტორის სტილები */
-        .author {
-            text-align: center;
-            font-family: "BPG Nuskha Modern", sans-serif;
-            margin-top: 20px;
-            color: #636e72;
-            font-size: 1em;
-            font-style: italic;
-            padding-bottom: 10px;
-        }
+    .poem p {
+        text-align: center;
+        line-height: 2;
+        color: #555;
+    }
+    
+    /* ავტორის სტილები */
+    .author {
+        text-align: center;
+        font-family: "BPG Nuskha Modern", sans-serif;
+        margin-top: 20px;
+        color: #636e72;
+        font-size: 1em;
+        font-style: italic;
+        padding-bottom: 10px;
+    }
     </style>
+    
+    <script>
+        // Function to hide the "not found" message when clicking outside the search box
+        document.addEventListener('click', function(event) {
+            let searchResults = document.getElementById('searchResults');
+            let searchBar = document.getElementById('searchBar');
+            
+            // Check if the click is outside the search bar
+            if (!searchBar.contains(event.target)) {
+                searchResults.innerHTML = ""; // Clear the search results
+            }
+        });
+    
+        function searchBooks() {
+            let input = document.getElementById('searchBar').value.toLowerCase(); // საძიებო ტექსტი
+            let searchResults = document.getElementById('searchResults'); // შედეგების კონტეინერი
+            searchResults.innerHTML = ""; // შედეგების გაწმენდა
+    
+            // პარამეტრები, რომლებიც განასხვავებენ ძიებას
+            if (input.includes("არის ასეთი ქალაქი")) {
+                // აჩვენებს პირველი ორი სურათი
+                searchResults.innerHTML = `
+                    <img src="images/chiaturabook.jpg" alt="Chiatura Book">
+                    <img src="images/turashvili.jpg" alt="Turashvili Book">
+                `;
+            } else if (input.includes("შავი ოქროს ქალაქი")) {
+                // აჩვენებს შავი ოქროს ქალაქის სურათს
+                searchResults.innerHTML = `
+                    <img src="images/blackgold.png" alt="Black Gold Book">
+                `;
+            } else {
+                // თუ ვერ მოიძებნა
+                searchResults.innerHTML = "<p>პასუხი ვერ მოიძებნა</p>";
+            }
+        }
+    </script>
     
     
 </head>
