@@ -43,30 +43,30 @@
         <h2 data-lang="news-header">სიახლეები</h2>
         <div class="news-form" id="newsForm">
             <h3 data-lang="addhere">
-                <i class="fas fa-plus-circle"></i> <!-- დამატების იკონა -->
+                <i class="fas fa-plus-circle"></i> 
                 ახალი ამბის დამატება
             </h3>
             <form id="addNewsForm">
                 <label for="title" data-lang="addtitle">
-                    <i class="fas fa-heading"></i> <!-- სათაურის იკონა -->
+                    <i class="fas fa-heading"></i> 
                     სათაური:
                 </label><br>
                 <input type="text" id="title" name="title" required placeholder="ჩაწერეთ სათაური -  სავალდებულო" data-lang="requiredtitle"><br><br>
         
                 <label for="date" data-lang="date">
-                    <i class="fas fa-calendar-alt"></i> <!-- თარიღის იკონა -->
+                    <i class="fas fa-calendar-alt"></i> 
                     თარიღი:
                 </label><br>
                 <input type="date" id="date" name="date" required><br><br>
         
                 <label for="story" data-lang="story">
-                    <i class="fas fa-file-alt"></i> <!-- ამბის იკონა -->
+                    <i class="fas fa-file-alt"></i> 
                     ამბავი:
                 </label><br>
                 <textarea id="story" name="story" required placeholder="ჩაწერეთ სიახლე - სავალდებულო"></textarea><br><br>
         
                 <label for="image" data-lang="photo">
-                    <i class="fas fa-image"></i> <!-- ფოტოს იკონა -->
+                    <i class="fas fa-image"></i> 
                     ფოტომასალა (ნებაყოფლობითი):
                 </label><br>
                 <input type="file" id="image" name="image"><br><br>
@@ -308,7 +308,7 @@ function deleteNews(index) {
             <b>ჭიათურის თეატრი 130 წლის გახდა</b>
 
         </p>
-        <img src="images/theatre.jpg">
+        <img src="images/theatre.jpg" class="zoomable-image">
         <p class="theatre" data-lang="theatrenews">დღეს ჭიათურის თეატრს 130 წელი შეუსრულდა.
             1894 წლის 11 დეკემბერს, მარგანეცის წარმოებით განთქმულ ჭიათურაში თეატრი დაარსდა. 
             თეატრს 1910 წლიდან მუდმივმოქმედი დასი ჰყავს  და საუკენეზე მეტია,  ქართული კულტურის განვითრებაში ღირსეული წვლილი შეაქვს.
@@ -329,7 +329,7 @@ function deleteNews(index) {
             <b>ჭიათურის საბაგირო "საშევარდნო-ზედა რგანი" გაიხსნა.</b>
 
         </p>
-        <img src="images/sashevardno.png">
+        <img src="images/sashevardno.png" class="zoomable-image">>
         <p class="cable" data-lang="cable">🚠  ჭიათურაში,ზედა რგანის (ე.წ  „მშვიდობის“ ) მიმართულებით სამგზავრო საბაგიროს რეაბილიტაციის პროცესი დასრულდა.
             🔹 აღდგენილი საბაგირო  დღეს იმერეთში სახელმწიფო რწმუნებულის მოადგილემ ლევან კიკნაველიძემ, საჩხერე-ჭიათურა-ხარაგაულის მაჟორიტარმა დეპუტატმა პაატა კვიჟინაძემ, ჭიათურის მუნიციპალიტეტის მერმა გივი მოდებაძემ,საკრებულოს თავმჯდომარემ ალექსანდრე ციცქიშვილმა და ადგილობრივი ხელისუფლების  წარმომადგენლებმა  დაათვალიერეს.
             ✅ 1966  წელს ინჟინერ-კონსტრუქტორის გიორგი ფანცულაიას თაოსნობით აშენებულ  უნიკალურ  სახალხო-სამგზავრო ბაგირგზას კულტურულ მემკვიდრეობის ძეგლის სტატუსი აქვს მინიჭებული და შესაბამისად  ავთენტურობა შეინარჩუნა.განახლდა მხოლოდ ტექნიკური ნაწილი -გონდოლები, მანქანა -დანადგარები და ბაგირები.
@@ -348,10 +348,36 @@ function deleteNews(index) {
             <b>ჭიათურაში სახალხო დღესასწაული “ჭიათურობა 2024” აღინიშნა.</b>
         </p>
         <div style="display: flex; justify-content: center; align-items: center; gap: 20px; padding: 20px;">
-            <img src="https://frontnews.ge/wp-content/uploads/2024/10/chiatura4-1-300x200.jpg" alt="სურათი 1" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-            <img src="https://frontnews.ge/wp-content/uploads/2024/10/chiatura-1-300x200.jpg" alt="სურათი 2" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-            <img src="images/MEDAMERI.jpg" alt="სურათი 3" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+            <img src="https://frontnews.ge/wp-content/uploads/2024/10/chiatura4-1-300x200.jpg" alt="სურათი 1" class="zoomable-image">
+            <img src="https://frontnews.ge/wp-content/uploads/2024/10/chiatura-1-300x200.jpg" alt="სურათი 2" class="zoomable-image">
+            <img src="images/MEDAMERI.jpg" alt="სურათი 3" class="zoomable-image" style="width: 300px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">>
         </div>
+        
+        <!-- Overlay for enlarged image -->
+        <div id="imageOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center;">
+            <img id="enlargedImage" style="max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);">
+        </div>
+        
+        <script>
+            // JavaScript for enlarging images
+            document.querySelectorAll('.zoomable-image').forEach(img => {
+                img.style.cursor = 'pointer'; // Change cursor to pointer
+                img.style.borderRadius = '10px';
+                img.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                img.addEventListener('click', () => {
+                    const overlay = document.getElementById('imageOverlay');
+                    const enlargedImg = document.getElementById('enlargedImage');
+                    enlargedImg.src = img.src;
+                    overlay.style.display = 'flex'; // Show overlay
+                });
+            });
+        
+            // Hide the overlay when clicked
+            document.getElementById('imageOverlay').addEventListener('click', () => {
+                document.getElementById('imageOverlay').style.display = 'none';
+            });
+        </script>
+        
         
         <p data-lang="chiaturoba" class="chiaturoba">
             ქალაქში მთელი დღის  განმავლობაში სხვადასხვა კულტურული, სპორტული და გასართობი ღონისძიებები მიმდინარეობდა. ასევე გაიმართა თეატრალიზებული წარმოდგენები, ფლეშმობები, ფერების ფესტივალი, საპნის ბუშტების, ქიმიური, აზოტის, დრამერების და ორკესტრების შოუები.
@@ -433,6 +459,9 @@ function deleteNews(index) {
     }
 }
 
+.cable{
+    font-size: 35x;
+}
     </style>
 
 </body>
