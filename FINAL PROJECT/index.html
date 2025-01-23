@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>მთავარი - ჭიათურა</title>
     <link rel="shortcut icon" href="images/SANDRINIO.png" type="image/x-icon">
-    <!-- Bootstrap CSS -->
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
@@ -31,8 +31,7 @@
                 <li><a href="AUTH/login.html" data-lang="log-in"><i class="fas fa-sign-in-alt"></i> <span class="menu-text"><b>Log In</b></span></a></li>
                 <li><a href="AUTH/register.html" data-lang="register"><i class="fas fa-user-plus"></i><span class="menu-text"><b>Register</span></b></a></li>
             </ul>
-            
-            
+
             <div class="language-buttons">
                 <button class="Georgian" onclick="changeLanguage('ka')">ქართული</button>
                 <button class="English" onclick="changeLanguage('en')">English</button>
@@ -62,9 +61,9 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        
+
     </section>
-    
+
     <div class="sticker mt-4">
         <img src="images/sabagiro.png" alt="საბაგირო სტიკერი" class="img-fluid cablecar-animation" height="250px" width="250">
     </div>
@@ -79,7 +78,7 @@
                 <div class="bot-card">
                     <img src="images/katskhi.png" alt="ტური 1" class="bot-image">
                     <div class="bot-content">
-                        
+
                         <h3 class="bot-title" data-lang="katskhi">ტური კაცხის სვეტზე</h3>
                         <p class="bot-description" data-lang="packet">გაფართოებული ტურები და დასვენების პაკეტი.</p>
                         <p class="cta-text" data-lang="dajavshne">დაჯავშნე აქ</p>
@@ -87,7 +86,7 @@
                 </div>
             </a>
         </div>
-    
+
         <div class="chatbot-container">
             <a href="plan.html" class="chatbot-link">
                 <div class="bot-card">
@@ -100,8 +99,7 @@
                 </div>
             </a>
         </div>
-    
-        
+
         <div class="chatbot-container">
             <a href="plan.html" class="chatbot-link">
                 <div class="bot-card">
@@ -114,9 +112,6 @@
                 </div>
             </a>
         </div>
-        
-
-        
 
         <div class="chatbot-container">
             <a href="https://www.animachatbotics.com/chatbot/Chat/4449" class="chatbot-link" target="_blank">
@@ -130,8 +125,7 @@
                 </div>
             </a>
         </div>
-        
-    
+
         <div class="chatbot-container">
             <a href="https://drive.google.com/file/d/18PlKjeuSdbkeexWWo3sm0I4rsiiiSF7q/view?usp=sharing" class="chatbot-link" target="_blank">
                 <div class="bot-card">
@@ -144,7 +138,7 @@
                 </div>
             </a>
         </div>
-    
+
         <div class="chatbot-container">
             <a href="https://www.facebook.com/profile.php?id=61563291839085" class="chatbot-link" target="_blank">
                 <div class="bot-card">
@@ -158,7 +152,7 @@
             </a>
         </div>
     </div>
-    
+
     <h4 class="gonisdzieba" data-lang="eventebi"><b>ღონისძიებები</b></h4>
     <div class="events">
         <img src="images/poster.webp" alt="Event Poster" 
@@ -173,15 +167,15 @@
     სადღესასწაულო კონცერტი: 🎧 17:30–18:10 ჯგუფი „ალილო“, 🎧 18:10–18:50 ჯგუფი „ქვევრები“, 🎧 18:50–19:30 მიქსტურა. 🎆 
     19:30-საზეიმო ფოიერვერკი.`)" />
     </div>
+
     
-    <!-- Popup ფანჯარა -->
     <div id="popup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="hidePopup()">&times;</span>
             <p id="popup-text"></p>
         </div>
     </div>
-    
+
     <style>
 
 .gonisdzieba {
@@ -190,7 +184,7 @@
         .events img {
             cursor: pointer;
         }
-    
+
         .popup {
             display: none;
             position: fixed;
@@ -203,7 +197,7 @@
             justify-content: center;
             align-items: center;
         }
-    
+
         .popup-content {
             background-color: white;
             padding: 20px;
@@ -214,7 +208,7 @@
             width: 80%;
             margin: auto;
         }
-    
+
         .popup-content .close {
             position: absolute;
             top: 10px;
@@ -224,20 +218,17 @@
             color: black;
         }
     </style>
-    
+
     <script>
         function showPopup(text) {
             document.getElementById("popup-text").textContent = text;
             document.getElementById("popup").style.display = "flex";
         }
-    
+
         function hidePopup() {
             document.getElementById("popup").style.display = "none";
         }
     </script>
-    
-
-
 
     <div class="subscription-container">
         <div class="subscription-form-container">
@@ -248,41 +239,36 @@
             <form action="javascript:void(0);" method="POST" class="subscription-form" onsubmit="alert('თქვენი გამოწერა შესრულებულია');">
                 <input data-lang="mail" type="email" name="email" placeholder="ჩაწერეთ მეილი" required>
                 <button type="submit" class="subscribe-btn" data-lang="subscribe">
-                    <i class="fas fa-paper-plane"></i>  <!-- იკონის დამატება -->
+                    <i class="fas fa-paper-plane"></i>  
                     გამოწერა
                 </button>
             </form>
         </div>
     </div>
-    
-        
-        
+
     </div>
-    
+
 <style>
-
-
 
 .events {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f9f9f9; /* ფონის ფერი */
+    background-color: #f9f9f9; 
     padding: 20px;
-    border-radius: 10px; /* მომრგვალებული კუთხეები */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ჩრდილი */
-    max-width: 420px; /* სექციის მაქსიმალური სიგანე */
-    margin: auto; /* ცენტრში გასწორება */
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    max-width: 420px; 
+    margin: auto; 
 }
 
 .events img {
-    max-width: 100%; /* გამოსახულების სიგანე კონტეინერს არ აჭარბებს */
-    height: auto; /* ავტომატური სიმაღლე */
-    border-radius: 10px; /* მომრგვალებული კუთხეები გამოსახულებაზე */
-    border: 2px solid #ddd; /* რბილი ჩარჩო */
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    border: 2px solid #ddd; 
 }
 
-    /* Общие настройки для контейнера */
 .chatbots-container {
     display: flex;
     justify-content: space-between;
@@ -292,7 +278,6 @@
     margin-top: 20px;
 }
 
-/* Контейнеры для каждого чатбота */
 .chatbot-container {
     width: 30%;
     min-width: 250px;
@@ -304,7 +289,6 @@
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для карточки бота */
 .bot-card {
     background: #fff;
     border-radius: 8px;
@@ -341,7 +325,6 @@
     cursor: pointer;
 }
 
-/* Кнопка для подписки */
 .subscription-container {
     margin-top: 40px;
     text-align: center;
@@ -392,39 +375,33 @@
     background-color: #0056b3;
 }
 
-/* Контейнер для всего кервуса */
 .section {
     background-color: #f8f9fa;
     padding: 50px 0;
 }
 
-/* Картинки внутри карусели */
 .carousel-inner img {
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease-in-out;
 }
 
-/* Эффект наведения на картинку */
 .carousel-inner img:hover {
     transform: scale(1.05);
 }
 
-/* Стиль для кнопок карусели */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Темный фон для иконок */
+    background-color: rgba(0, 0, 0, 0.5); 
     border-radius: 50%;
     transition: background-color 0.3s ease;
 }
 
-/* Эффект при наведении на кнопки */
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Дополнительный блок изображения снизу */
 section .section > div {
     display: flex;
     justify-content: center;
@@ -437,30 +414,28 @@ section .section img {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Эффект при наведении на дополнительную картинку */
 section .section img:hover {
     transform: scale(1.1);
 }
 
-
 </style>
-    <!-- Updated footer -->
+    
      <footer>
         <div class="footer-content">
-            <a href="https://www.tbceducation.ge/"><img src="images/tbc.png" alt="TBC Logo" class="footer-logo" height="125"></a>
-            
+            <a href="https://www.tbceducation.ge/" target="_blank"><img src="images/tbc.png" alt="TBC Logo" class="footer-logo" height="125"></a>
+
             <ul class="social-links">
-                <li><a href="https://www.facebook.com/profile.php?id=61556699115785&locale=ka_GE"><img src="images/imfacebook.png" alt="Facebook" height="125"></a></li>
-                <li><a href="https://www.instagram.com/s63674505?igsh=Zjl0d3AxbDF6aG8y&utm_source=ig_contact_invite"><img src="images/insta.png" alt="Instagram" height="125"></a></li>
-                <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"><img src="images/linked.png" alt="LinkedIn" height="125"></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61556699115785&locale=ka_GE" target="_blank"><img src="images/imfacebook.png" alt="Facebook" height="125"></a></li>
+                <li><a href="https://www.instagram.com/s63674505?igsh=Zjl0d3AxbDF6aG8y&utm_source=ig_contact_invite" target="_blank"><img src="images/insta.png" alt="Instagram" height="125"></a></li>
+                <li><a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank"><img src="images/linked.png" alt="LinkedIn" height="125"></a></li>
                 <li><a href="privacy.html"><img src="images/privacy.png"></a></li>
             </ul>
-            
+
         </div>
         <p data-lang="copyright" class="rights">© 2024 ყველა უფლება დაცულია</p>
     </footer>
+
     
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </style>
 </body>
